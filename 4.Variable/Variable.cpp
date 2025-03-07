@@ -8,8 +8,8 @@ int main()
     // int sum = a + b;
     // cout << sum;
 
-    // int a{2};
-    // int b{5};
-    // cout << a + b;
+    int a{2};
+    int b{5};
+    cout << a + b;
     return 0;
 }
