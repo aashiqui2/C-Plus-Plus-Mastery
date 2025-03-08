@@ -29,7 +29,6 @@ int main()
     */
 
     //! Functional Initialization
-    
      int apple_count(5);
      int orange_count(10);
      int fruit_count (apple_count + orange_count);
