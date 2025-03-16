@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
@@ -13,9 +13,9 @@ int main()
 
         if(i == 11)
             break; // Breaks out of the loop
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
     }
-    std::cout << "Loop done!" << std::endl;
+    cout << "Loop done!" << endl;
     */
 
     //! break and continue : while loop
@@ -32,10 +32,10 @@ int main()
         if (i == 11)
             break;
 
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         ++i;
     }
-    std::cout << "Loop done!" << std::endl;
+    cout << "Loop done!" << endl;
     //! break and continue : do while loop
     //   size_t i{0};
 
@@ -48,7 +48,7 @@ int main()
     //      if(i==11)
     //         break;
 
-    //         std::cout << "i : " << i << std::endl;
+    //         cout << "i : " << i << endl;
     //         ++i;
 
     //   }while(i <20);

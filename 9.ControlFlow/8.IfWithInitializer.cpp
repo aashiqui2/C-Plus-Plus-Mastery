@@ -1,24 +1,24 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
 	
 	bool go {true};
 
 	if(int speed {10};go){
-        std::cout << "speed : " << speed << std::endl;
+        cout << "speed : " << speed << endl;
 		
 		if(speed > 5){
-			std::cout << "Slow down!" << std::endl;
+			cout << "Slow down!" << endl;
 		}else{
-			std::cout << "All good!" << std::endl;
+			cout << "All good!" << endl;
 		}
 	}else{
-        std::cout << "speed : " << speed << std::endl;
-		std::cout << "Stop" << std::endl;
+        cout << "speed : " << speed << endl;
+		cout << "Stop" << endl;
 	}
 
-    //std::cout << "Out of the if block , speed : " << speed << std::endl;
+    //cout << "Out of the if block , speed : " << speed << endl;
    
     return 0;
 }

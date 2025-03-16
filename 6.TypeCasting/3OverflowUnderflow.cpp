@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
     //Overflow 
@@ -7,33 +7,33 @@ int main(){
     unsigned char data {250};
 
     ++data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
     ++data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
     ++data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
     ++data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
     ++data; 
-    std::cout << "data : " << std::hex <<  static_cast<int>(data) << std::endl; // 255
+    cout << "data : " << hex <<  static_cast<int>(data) << endl; // 255
 
     ++data;  // Overflow
-    std::cout << "data : " << static_cast<int>(data) << std::endl; // 256
+    cout << "data : " << static_cast<int>(data) << endl; // 256
 
-    std::cout << std::dec ;
+    cout << dec ;
 
 
     data = 1;
 
     --data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
     --data;
-    std::cout << "data : " << static_cast<int>(data) << std::endl;
+    cout << "data : " << static_cast<int>(data) << endl;
 
    
     return 0;

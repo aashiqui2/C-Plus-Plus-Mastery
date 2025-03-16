@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
     int condition{0};
@@ -17,28 +17,28 @@ int main(){
         x = 6;
         x++;
         //z =6;
-        std::cout << "x : " << x << std::endl;
-        std::cout << "Statement1" << std::endl;
-        std::cout << "Statement2" << std::endl;
+        cout << "x : " << x << endl;
+        cout << "Statement1" << endl;
+        cout << "Statement2" << endl;
         break;
 
     case 1 : 
         int z;
         my_var++;
         y = 5;
-        std::cout << "y : " << y << std::endl;
-        std::cout << "Statement3" << std::endl;
-        std::cout << "Statement4" << std::endl;
+        cout << "y : " << y << endl;
+        cout << "Statement3" << endl;
+        cout << "Statement4" << endl;
         break;
     
     default:
         int u;
         z = 10;
-        std::cout << "Statement5" << std::endl;
-        std::cout << "Statement6" << std::endl;
+        cout << "Statement5" << endl;
+        cout << "Statement6" << endl;
         break;
     }
-    std::cout << "Moving on..." << std::endl;
+    cout << "Moving on..." << endl;
    
     return 0;
 }

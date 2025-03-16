@@ -1,12 +1,12 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
 
 	int numbers[] {1,2,3,4,5,6,7,8,9,0};
 	
 	//Read beyond bounds : Will read garbage or crash your program
-	//std::cout << "numbers[12] : " << numbers[12] << std::endl;
+	//cout << "numbers[12] : " << numbers[12] << endl;
 
 	//Write beyond bounds. The compiler allows it. But you don't own 
 	//the memory at index 12, so other programs may modify it and your
@@ -14,9 +14,9 @@ int main(){
 	//corrupt data used by other parts of your program
 
 	numbers[129] = 1000;
-	std::cout << "numbers[129] : " << numbers[129] << std::endl;
+	cout << "numbers[129] : " << numbers[129] << endl;
 
-    std::cout << "Program ending...." << std::endl;
+    cout << "Program ending...." << endl;
 
     
     return 0;

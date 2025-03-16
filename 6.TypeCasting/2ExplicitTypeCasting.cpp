@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+using namespace std;
 int main(){
 
 	//Implicit cast will add up the doubles,
@@ -10,16 +10,16 @@ int main(){
     
     int sum = x + y; 
     
-    std::cout << "The sum  is : " << sum << std::endl;
+    cout << "The sum  is : " << sum << endl;
 
 
 	//Explicity cast : cast then sum up
 	sum = static_cast<int>(x) + static_cast<int>(y) ;
-    std::cout << "The sum  is : " << sum << std::endl;
+    cout << "The sum  is : " << sum << endl;
 
 	//Explicit cast : sum up then cast, same thing as implicit cast
 	sum =  static_cast<int> (x + y);
-	std::cout << "Sum up then cast, result : " << sum << std::endl;
+	cout << "Sum up then cast, result : " << sum << endl;
 
 
 	//Old style C-cast
@@ -27,8 +27,8 @@ int main(){
 	
 	//int int_pi = (int)(PI);
     int int_pi = static_cast<int>(PI);
-	std::cout << "PI : " << PI << std::endl;
-    std::cout << "int_pi : " << int_pi << std::endl;
+	cout << "PI : " << PI << endl;
+    cout << "int_pi : " << int_pi << endl;
    
     return 0;
 }

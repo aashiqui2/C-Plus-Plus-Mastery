@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 int main(){
 
 	//		. The compiler applies implicit conversions
@@ -14,8 +15,8 @@ int main(){
     
     auto total_price = price * units; // units will be implicitly converted to double
 	
-	std::cout << "Total price : " << total_price << std::endl;
-	std::cout << "sizeof total_price : " << sizeof(total_price) << std::endl;
+	cout << "Total price : " << total_price << endl;
+	cout << "sizeof total_price : " << sizeof(total_price) << endl;
 
 
 	//Implicit conversions in assignments
@@ -24,8 +25,8 @@ int main(){
 	int x;
     double y {45.44};
     x = y; // double to int
-	std::cout << "The value of x is : " << x << std::endl; // 45
-	std::cout << "sizeof x : " << sizeof(x) << std::endl;// 4
+	cout << "The value of x is : " << x << endl; // 45
+	cout << "sizeof x : " << sizeof(x) << endl;// 4
 	
    
     return 0;

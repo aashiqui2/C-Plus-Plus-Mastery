@@ -1,14 +1,14 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
    
    constexpr bool condition {false};
 
    if constexpr (condition){
-       std::cout << "Condition is true" << std::endl;
+       cout << "Condition is true" << endl;
    }else{
-       std::cout << "Condition is false" << std::endl;
+       cout << "Condition is false" << endl;
    }
     return 0;
 }

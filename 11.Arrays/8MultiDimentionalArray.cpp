@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
@@ -19,22 +19,22 @@ int main()
 
         for(size_t j{0}; j < 4 ; ++j){
 
-            std::cout << packages[i][j] << "   ";
+            cout << packages[i][j] << "   ";
         }
-        std::cout << std::endl;
+        cout << endl;
 
     }
     */
 
-    //! Use std::size to query the size of array dimensions
+    //! Use size to query the size of array dimensions
     /*
-    for(size_t i{0} ; i < std::size(packages); ++ i){
+    for(size_t i{0} ; i < size(packages); ++ i){
 
-        for(size_t j{0}; j < std::size(packages[i])  ; ++j){
+        for(size_t j{0}; j < size(packages[i])  ; ++j){
 
-            std::cout << packages[i][j] << "   ";
+            cout << packages[i][j] << "   ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
     */
 
@@ -49,16 +49,16 @@ int main()
     //     {{76, 77, 78}, {79, 80, 81}, {82, 83, 84}, {85, 86, 87}, {88, 89, 90}},
     //     {{91, 92, 93}, {94, 95, 96}, {97, 98, 99}, {100, 101, 102}, {103, 104, 105}}};
 
-    // for (size_t i{0}; i < std::size(house_block); ++i)
+    // for (size_t i{0}; i < size(house_block); ++i)
     // {
 
-    //     for (size_t j{0}; j < std::size(house_block[i]); ++j)
+    //     for (size_t j{0}; j < size(house_block[i]); ++j)
     //     {
 
-    //         for (size_t k{0}; k < std::size(house_block[i][j]); ++k)
+    //         for (size_t k{0}; k < size(house_block[i][j]); ++k)
     //         {
 
-    //             std::cout << house_block[i][j][k] << "     ";
+    //             cout << house_block[i][j][k] << "     ";
     //         }
     //     }
     // }
@@ -72,11 +72,11 @@ int main()
     //     {10,11,12},
     // 	{100,110,120} // Can add as many triplets in packages2 as we want
     // };
-    // std::cout << std::endl;
-    // std::cout << "Ommiting leftmost dimension for 2d array : " << std::endl;
-    // for (size_t i{0} ; i < std::size(packages2) ; ++i){
-    //     for( size_t j{0} ; j < std::size(packages2[i]) ; ++j){
-    //         std::cout << "Item (" << i << "," << j << ") : " << packages2[i][j] << std::endl;
+    // cout << endl;
+    // cout << "Ommiting leftmost dimension for 2d array : " << endl;
+    // for (size_t i{0} ; i < size(packages2) ; ++i){
+    //     for( size_t j{0} ; j < size(packages2[i]) ; ++j){
+    //         cout << "Item (" << i << "," << j << ") : " << packages2[i][j] << endl;
     //     }
     // }
 
@@ -100,18 +100,18 @@ int main()
 
     // };
 
-    // for (size_t i {0} ; i < std::size(house_block1 ); ++i){
+    // for (size_t i {0} ; i < size(house_block1 ); ++i){
 
-    //     for( size_t j{0}; j < std::size(house_block1[i]) ; ++j){
+    //     for( size_t j{0}; j < size(house_block1[i]) ; ++j){
 
-    //         std::cout << "[";
-    //         for( size_t k{0}; k < std::size(house_block1[i][j]) ; ++k){
+    //         cout << "[";
+    //         for( size_t k{0}; k < size(house_block1[i][j]) ; ++k){
 
-    //             std::cout << house_block1[i][j][k] << " ";
+    //             cout << house_block1[i][j][k] << " ";
     //         }
-    //         std::cout <<"] " ;//Separate elements for good visualization
+    //         cout <<"] " ;//Separate elements for good visualization
     //     }
-    //     std::cout << std::endl;//Separate elements for good visualization
+    //     cout << endl;//Separate elements for good visualization
     // }
 
 
@@ -144,21 +144,21 @@ int main()
      //Modify data
      house_block2[0][2][1] = 1021;
 
-     std::cout << std::endl;
-     std::cout << "Printing out 3d house_block array with defaulted elements : " << std::endl;
+     cout << endl;
+     cout << "Printing out 3d house_block array with defaulted elements : " << endl;
 
-     for (size_t i {0} ; i < std::size(house_block2 ); ++i){
+     for (size_t i {0} ; i < size(house_block2 ); ++i){
 
-         for( size_t j{0}; j < std::size(house_block2[i]) ; ++j){
+         for( size_t j{0}; j < size(house_block2[i]) ; ++j){
 
-             std::cout << "[";
-             for( size_t k{0}; k < std::size(house_block2[i][j]) ; ++k){
+             cout << "[";
+             for( size_t k{0}; k < size(house_block2[i][j]) ; ++k){
 
-                 std::cout << house_block2[i][j][k] << " ";
+                 cout << house_block2[i][j][k] << " ";
              }
-             std::cout <<"] " ;//Separate elements for good visualization
+             cout <<"] " ;//Separate elements for good visualization
          }
-         std::cout << std::endl;//Separate elements for good visualization
+         cout << endl;//Separate elements for good visualization
      }
 
  

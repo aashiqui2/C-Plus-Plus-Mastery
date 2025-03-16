@@ -16,7 +16,7 @@ int main()
 
     //! Brian Kernighan’s Algorithm (Efficient)
     int num = 29; // Binary: 11101 (4 set bits)
-    std::cout << "Number of set bits: " << countSetBits(num) << std::endl;
+    cout << "Number of set bits: " << countSetBits(num) << endl;
 
     return 0;
 }

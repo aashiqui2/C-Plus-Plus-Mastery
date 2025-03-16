@@ -1,9 +1,9 @@
 #include <iostream>
 #include <ctime>
-
+using namespace std;
 int main(){
    //srand() has to run once per program run
-    std::srand(std::time(0)); // Seed
+    srand(time(0)); // Seed
 
     char prediction0[]{ "a lot of kinds running in the backyard!" };
     char prediction1[]{ "a lot of empty beer bootles on your work table." };
@@ -21,62 +21,62 @@ int main(){
     const int  max_length{ 15 };
     char name[max_length]{};
 
-    std::cout << "What's your name dear :" << std::endl;
+    cout << "What's your name dear :" << endl;
 
-    std::cin.getline(name, max_length); // Get input with spaces
+    cin.getline(name, max_length); // Get input with spaces
 
     while (!end) {
-        std::cout << "Oh dear " << name << ", I see ";
+        cout << "Oh dear " << name << ", I see ";
 
-        size_t rand_num = static_cast<size_t>((std::rand() % 11));
+        size_t rand_num = static_cast<size_t>((rand() % 11));
 
         switch (rand_num) { // [0~10]
         case 0:
-            std::cout << prediction0 << std::endl;
+            cout << prediction0 << endl;
             break;
         case 1:
-            std::cout << prediction1 << std::endl;
+            cout << prediction1 << endl;
             break;
 
         case 2:
-            std::cout << prediction2 << std::endl;
+            cout << prediction2 << endl;
             break;
         case 3:
-            std::cout << prediction3 << std::endl;
+            cout << prediction3 << endl;
             break;
         case 4:
-            std::cout << prediction4 << std::endl;
+            cout << prediction4 << endl;
             break;
         case 5:
-            std::cout << prediction5 << std::endl;
+            cout << prediction5 << endl;
             break;
         case 6:
-            std::cout << prediction6 << std::endl;
+            cout << prediction6 << endl;
             break;
         case 7:
-            std::cout << prediction7 << std::endl;
+            cout << prediction7 << endl;
             break;
 
         case 8:
-            std::cout << prediction8 << std::endl;
+            cout << prediction8 << endl;
             break;
 
         case 9:
-            std::cout << prediction9 << std::endl;
+            cout << prediction9 << endl;
             break;
         default:
-            std::cout << ", huum, I don't see anything" << std::endl;
+            cout << ", huum, I don't see anything" << endl;
         }
-        std::cout << "Do you want me to try again ? (Y | N) : ";
+        cout << "Do you want me to try again ? (Y | N) : ";
 
         char go_on;
-        std::cin >> go_on;
+        cin >> go_on;
 
         end = ((go_on == 'Y') || (go_on == 'y')) ? false : true;
 
     }
 
-    std::cout << "That's all I have for you today dear. Best wishes" << std::endl;
+    cout << "That's all I have for you today dear. Best wishes" << endl;
 
     return 0;
 }

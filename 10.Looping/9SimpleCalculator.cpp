@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
 	char operation; // +,-,*,/
@@ -7,44 +7,44 @@ int main(){
     double operand2;
     bool end {false};
     
-    std::cout << "Welcome to Awesome Calculator"<< std::endl;
+    cout << "Welcome to Awesome Calculator"<< endl;
     
     while((end == false)){
 		//Do some processing
-        std::cout << "--------------------------------------------" << std::endl;
-        std::cout << "What operation do you want help with? " << std::endl;
-        std::cout << "+,-,* and / are supported. Please choose one and type below"<< std::endl;
-        std::cout << "Your operation : ";
-        std::cin >> operation;
+        cout << "--------------------------------------------" << endl;
+        cout << "What operation do you want help with? " << endl;
+        cout << "+,-,* and / are supported. Please choose one and type below"<< endl;
+        cout << "Your operation : ";
+        cin >> operation;
         
-        std::cout << std::endl;
-        std::cout << "Please type in your two operands separated by a space and hit enter: ";
-        std::cin >> operand1 >> operand2;
-        std::cout <<std::endl;
+        cout << endl;
+        cout << "Please type in your two operands separated by a space and hit enter: ";
+        cin >> operand1 >> operand2;
+        cout <<endl;
         
 		switch(operation){
         case '+' : 
-            std::cout << operand1 << " + " << operand2 << " = " << (operand1 + operand2) << std::endl;
+            cout << operand1 << " + " << operand2 << " = " << (operand1 + operand2) << endl;
             break;
         case '-' : 
-            std::cout << operand1 << " - " << operand2 << " = " << (operand1 - operand2) << std::endl;
+            cout << operand1 << " - " << operand2 << " = " << (operand1 - operand2) << endl;
             break;
         case '*' : 
-            std::cout << operand1 << " * " << operand2 << " = " << (operand1 * operand2) << std::endl;
+            cout << operand1 << " * " << operand2 << " = " << (operand1 * operand2) << endl;
             break;
         case '/' : 
-            std::cout << operand1 << " / " << operand2 << " = " << (operand1 / operand2) << std::endl;
+            cout << operand1 << " / " << operand2 << " = " << (operand1 / operand2) << endl;
             break;
         default :
-            std::cout << operation << " operation not supported" << std::endl;
+            cout << operation << " operation not supported" << endl;
             break;
 		}
 	
 		
-        std::cout << "Continue ? ( Y | N) : ";
+        cout << "Continue ? ( Y | N) : ";
         
         char go_on;
-        std::cin >> go_on;
+        cin >> go_on;
         
         //end = ((go_on == 'Y') || (go_on == 'y')) ? false : true;
         
@@ -56,7 +56,7 @@ int main(){
         }
     }
     
-    std::cout << "Done helping out. BYE!" << std::endl;
+    cout << "Done helping out. BYE!" << endl;
 
     return 0;
 }

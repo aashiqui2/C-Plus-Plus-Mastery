@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
     //! Braced initializers
@@ -21,11 +21,11 @@ int main()
     // int new_number{doesnt_exist};
     // int narrowing_conversion {2.9};//Compiler error
 
-    std::cout << "Elephant count : " << elephant_count << std::endl;
-    std::cout << "Lion count : " << lion_count << std::endl;
-    std::cout << "Dog count : " << dog_count << std::endl;
-    std::cout << "Cat count : " << cat_count << std::endl;
-    std::cout << "Domesticated animal count : " << domesticated_animals << std::endl; 
+    cout << "Elephant count : " << elephant_count << endl;
+    cout << "Lion count : " << lion_count << endl;
+    cout << "Dog count : " << dog_count << endl;
+    cout << "Cat count : " << cat_count << endl;
+    cout << "Domesticated animal count : " << domesticated_animals << endl; 
     */
 
     //! Functional Initialization
@@ -38,10 +38,10 @@ int main()
      int narrowing_conversion_functional (2.9);
 
 
-     std::cout << "Apple count : " << apple_count << std::endl;
-     std::cout << "Orange count : " << orange_count << std::endl;
-     std::cout << "Fruit count : " << fruit_count << std::endl;
-     std::cout << "Narrowing conversion : " << narrowing_conversion_functional << std::endl;//Will loose info
+     cout << "Apple count : " << apple_count << endl;
+     cout << "Orange count : " << orange_count << endl;
+     cout << "Fruit count : " << fruit_count << endl;
+     cout << "Narrowing conversion : " << narrowing_conversion_functional << endl;//Will loose info
     
 
     //! Assignment notation
@@ -51,13 +51,13 @@ int main()
     // int vehicle_count = bike_count +truck_count;
     // int narrowing_conversion_assignment = 2.9;
 
-    // std::cout << "Bike count : " << bike_count << std::endl;
-    // std::cout << "Truck count : " << truck_count << std::endl;
-    // std::cout << "Vehicle count : " << vehicle_count << std::endl;
-    // std::cout << "Narrowing conversion : " << narrowing_conversion_assignment << std::endl;
+    // cout << "Bike count : " << bike_count << endl;
+    // cout << "Truck count : " << truck_count << endl;
+    // cout << "Vehicle count : " << vehicle_count << endl;
+    // cout << "Narrowing conversion : " << narrowing_conversion_assignment << endl;
 
     // //Check the size with sizeof
-    // std::cout << "sizeof int : " << sizeof(int) << std::endl;
-    // std::cout << "sizeof truck_count : " << sizeof(truck_count) << std::endl;
+    // cout << "sizeof int : " << sizeof(int) << endl;
+    // cout << "sizeof truck_count : " << sizeof(truck_count) << endl;
     return 0;
 }

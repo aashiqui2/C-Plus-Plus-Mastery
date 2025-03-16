@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+using namespace std;
 int main(){
 
     const  char * const   students [] {
@@ -14,10 +14,10 @@ int main(){
     
 
     //Print out the students
-	std::cout << std::endl;
-    std::cout << "Printing out the students : " << std::endl;
+	cout << endl;
+    cout << "Printing out the students : " << endl;
     for ( const char * student : students){
-        std::cout << student << std::endl;
+        cout << student << endl;
     }
 
 
@@ -29,10 +29,10 @@ int main(){
 
 
    //Print out the students
-	std::cout << std::endl;
-    std::cout << "Printing out the students : " << std::endl;
+	cout << endl;
+    cout << "Printing out the students : " << endl;
     for ( const char * student : students){
-        std::cout << student << std::endl;
+        cout << student << endl;
     }
    
     return 0;

@@ -38,7 +38,7 @@ int main()
 {
     use_options_v0(0, 0, 1, 1, 1, 0, 1, 0);
 
-    std::cout << "----------------------" << std::endl;
+    cout << "----------------------" << endl;
 
     use_options_v1(mask_bit_2 | mask_bit_3 | mask_bit_4 | mask_bit_6);
     return 0;

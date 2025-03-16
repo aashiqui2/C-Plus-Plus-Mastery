@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
 
@@ -17,12 +17,12 @@ int main(){
     // which will be between 0 and 255. 
     
 	//Set some format options
-	std::cout << std::dec << std::showbase << std::endl;
+	cout << dec << showbase << endl;
 	
-    std::cout << "Red is : " <<  ((my_color & red_mask) >> 24) << std::endl;
-    std::cout << "Green is : " <<  ((my_color & green_mask) >> 16) << std::endl;
-    std::cout << "Blue is : " <<  ((my_color & blue_mask) >> 8) << std::endl;
-    std::cout << "Alpha is : " <<  ((my_color & alpha_mask) >> 0) << std::endl;
+    cout << "Red is : " <<  ((my_color & red_mask) >> 24) << endl;
+    cout << "Green is : " <<  ((my_color & green_mask) >> 16) << endl;
+    cout << "Blue is : " <<  ((my_color & blue_mask) >> 8) << endl;
+    cout << "Alpha is : " <<  ((my_color & alpha_mask) >> 0) << endl;
     
     return 0;
 }

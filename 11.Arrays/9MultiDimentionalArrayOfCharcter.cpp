@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
@@ -14,20 +14,20 @@ int main()
     //! Declaring a 2D array
 
     //! Printing out like this is unsafe : may go over and print outside your valid memory block until a terminating null character is encountered.
-    // std::cout << "Unsafe printing of members : " << std::endl;
-    // for (size_t i {0}; i < std::size(members) ; ++i){
-    //     std::cout << members[i] << std::endl;
+    // cout << "Unsafe printing of members : " << endl;
+    // for (size_t i {0}; i < size(members) ; ++i){
+    //     cout << members[i] << endl;
     // }
 
     //! Can loop around manually printing out each character
-    // std::cout << "Printing out character by character manually : " << std::endl;
-    // for (size_t i{0} ; i < std::size(members) ; ++i){
+    // cout << "Printing out character by character manually : " << endl;
+    // for (size_t i{0} ; i < size(members) ; ++i){
 
-    //     for (size_t j{0} ; j < std::size(members[i]) ; ++j){
+    //     for (size_t j{0} ; j < size(members[i]) ; ++j){
 
-    //         std::cout << members[i][j] ;
+    //         cout << members[i][j] ;
     //     }
-    //     std::cout << std::endl;
+    //     cout << endl;
     // }
 
     //! Better : Using C-string litterals
@@ -40,10 +40,10 @@ int main()
     //     "Rodriguez"};
 
     // //! Printing out members1
-    // std::cout << "Printing out members1 (C-string literals) : " << std::endl;
-    // for (size_t i{0}; i < std::size(members1); ++i)
+    // cout << "Printing out members1 (C-string literals) : " << endl;
+    // for (size_t i{0}; i < size(members1); ++i)
     // {
-    //     std::cout << members1[i] << std::endl;
+    //     cout << members1[i] << endl;
     // }
 
     //! Updating our prediction declaration in the fortune teller game
@@ -61,8 +61,8 @@ int main()
          "Uhm , I don't see anything!"
     };
 
-    std::cout << std::endl;
-    std::cout << "Prediction : " << predictions[5] << std::endl;
+    cout << endl;
+    cout << "Prediction : " << predictions[5] << endl;
 
     return 0;
 }

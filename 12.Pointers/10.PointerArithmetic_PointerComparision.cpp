@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
     
@@ -12,14 +12,14 @@ int main(){
     
     //The further you go in the array, the bigger the address
     
-    std::cout << "Comparing pointers : " <<std::boolalpha <<  std::endl;
+    cout << "Comparing pointers : " <<boolalpha <<  endl;
 	
-    std::cout << "pointer1 > pointer2 : " <<  (pointer1 > pointer2) << std::endl;
-    std::cout << "pointer1 < pointer2 : " << (pointer1 < pointer2) << std::endl;
-    std::cout << "pointer1 >= pointer2 : " <<  (pointer1 >= pointer2) << std::endl;
-    std::cout << "pointer1 <= pointer2: " << (pointer1 <= pointer2) << std::endl;
-    std::cout << "pointer1 == pointer2 : " <<  (pointer1 == pointer2) << std::endl;
-    std::cout << "pointer1 != pointer2 : " << (pointer1 != pointer2) << std::endl;
+    cout << "pointer1 > pointer2 : " <<  (pointer1 > pointer2) << endl;
+    cout << "pointer1 < pointer2 : " << (pointer1 < pointer2) << endl;
+    cout << "pointer1 >= pointer2 : " <<  (pointer1 >= pointer2) << endl;
+    cout << "pointer1 <= pointer2: " << (pointer1 <= pointer2) << endl;
+    cout << "pointer1 == pointer2 : " <<  (pointer1 == pointer2) << endl;
+    cout << "pointer1 != pointer2 : " << (pointer1 != pointer2) << endl;
     
     return 0;
 }

@@ -7,51 +7,51 @@ int main()
     // char message[6]{"Hello"};
 
     // int data[5] {1,2,3,3,3,};
-    // std::cout << "data : " << data << std::endl;
+    // cout << "data : " << data << endl;
 
     //! Print out the array through looping
 
-    // std::cout << "message : ";
+    // cout << "message : ";
     // for (auto c : message)
     // {
-    //     std::cout << c;
+    //     cout << c;
     // }
-    // std::cout << std::endl;
+    // cout << endl;
 
     //! Change characters in our array
     // message[1] = 'a';
 
     //! Print out the array through looping
-    // std::cout << "message : ";
+    // cout << "message : ";
     // for( auto c : message){
-    //     std::cout << c ;
+    //     cout << c ;
     // }
-    // std::cout << std::endl;
+    // cout << endl;
 
     //! If a character array is null terminated, it's called as C-String
     // char message1[]{'H', 'e', 'l', 'l', 'o', '\0'};
-    // std::cout << "message1 : " << message1 << std::endl;
-    // std::cout << "sizeof(message1) : " << sizeof(message1) << std::endl;
+    // cout << "message1 : " << message1 << endl;
+    // cout << "sizeof(message1) : " << sizeof(message1) << endl;
 
     // char message2 [6] {'H','e','l','l','o'};
-    // std::cout << "message2 : " << message2 << std::endl;
-    // std::cout << "sizeof(message2) : " << sizeof(message2) << std::endl;
+    // cout << "message2 : " << message2 << endl;
+    // cout << "sizeof(message2) : " << sizeof(message2) << endl;
 
     // char message3 [] {'H','e','l','l','o'}; 
     //! This is not a c string , as there is not null character
     //!Will probably print garbage after your char array
 
-    // std::cout << "message3 : " << message3 << std::endl;
-    // std::cout << "sizeof(message3) : " << sizeof(message3) << std::endl;
+    // cout << "message3 : " << message3 << endl;
+    // cout << "sizeof(message3) : " << sizeof(message3) << endl;
 
     //! String literal
     // char message4 [] {"Hello"};
-    // std::cout << "message4 : " << message4 << std::endl;
-    // std::cout << "sizeof(message4) : " << sizeof(message4) << std::endl;
+    // cout << "message4 : " << message4 << endl;
+    // cout << "sizeof(message4) : " << sizeof(message4) << endl;
 
     //! Can't safely print out arrays other than those of characters
     // int numbers [] {1,2,3,4,5};
-    // std::cout << "numbers :  " << numbers << std::endl;
+    // cout << "numbers :  " << numbers << endl;
 
     return 0;
 }

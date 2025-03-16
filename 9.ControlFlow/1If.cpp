@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
 
@@ -9,19 +9,19 @@ int main(){
     
     /*
 	
-	std::cout << std::boolalpha << "result : " << result << std::endl; 
+	cout << boolalpha << "result : " << result << endl; 
 	
-	std::cout << std::endl;
-	std::cout << "free standing if statement" << std::endl;
+	cout << endl;
+	cout << "free standing if statement" << endl;
    
     //if(result){
 	if(result == true){
-        std::cout << number1 << " is less than " << number2 << std::endl;
+        cout << number1 << " is less than " << number2 << endl;
     }
     
     //if(!result){
 	if(!(result == true)){
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
+        cout << number1 << " is NOT less than " << number2 << endl;
     }
 
     */
@@ -29,33 +29,33 @@ int main(){
 
    	//Using else
     /*
-	std::cout << std::endl;
-	std::cout << "using the else clause : " << std::endl;
+	cout << endl;
+	cout << "using the else clause : " << endl;
 	
 	if(result == true){
-        std::cout << number1 << " is less than " << number2 << std::endl;
+        cout << number1 << " is less than " << number2 << endl;
     }else{
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
+        cout << number1 << " is NOT less than " << number2 << endl;
     }
     */
 
 
 	//Use expression as condition directly
     /*
-	std::cout << std::endl;
-	std::cout << "Using expression as condition : " << std::endl;
+	cout << endl;
+	cout << "Using expression as condition : " << endl;
 	
 	if(number1 < number2){
-        std::cout << number1 << " is less than " << number2 << std::endl;
+        cout << number1 << " is less than " << number2 << endl;
     }else{
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
+        cout << number1 << " is NOT less than " << number2 << endl;
     }
     */
 
 
 	//Nesting if statements
-	std::cout << std::endl;
-	std::cout << "Nesting if statements" << std::endl;
+	cout << endl;
+	cout << "Nesting if statements" << endl;
 	
     bool red = false;
     bool green {true};
@@ -69,35 +69,35 @@ int main(){
      * */
      
     /*  if(red){
-         std::cout << "Stop" << std::endl;
+         cout << "Stop" << endl;
      }
      if(yellow){
-         std::cout << "Slow down" << std::endl;
+         cout << "Slow down" << endl;
      }
 	 if(green){
-		 std::cout << "Go" << std::endl;
+		 cout << "Go" << endl;
 	 } */
     
 
     /*
-    std::cout << std::endl;
-	 std::cout << "Police officer stops(verbose)" << std::endl;
+    cout << endl;
+	 cout << "Police officer stops(verbose)" << endl;
 	 if(green){
          if(police_stop){
-             std::cout << "Stop" << std::endl;
+             cout << "Stop" << endl;
          }
          else{
-             std::cout << "Go" << std::endl;
+             cout << "Go" << endl;
          }
 
      }
      */
-     std::cout << std::endl;
-	 std::cout << "Police officer stops(less verbose)" << std::endl;
+     cout << endl;
+	 cout << "Police officer stops(less verbose)" << endl;
 	 if(green && !police_stop){
-         std::cout << "Go" << std::endl;
+         cout << "Go" << endl;
      }else{
-         std::cout << "Stop" << std::endl;
+         cout << "Stop" << endl;
      }
     return 0;
 }

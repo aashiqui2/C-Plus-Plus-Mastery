@@ -1,26 +1,26 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
     int scores[]{1, 2, 5};
-    int count{std::size(scores)}; // std::size( C++17)
+    int count{size(scores)}; // size( C++17)
 
-    std::cout << "sizeof(scores) : " << sizeof(scores) << std::endl;
-    std::cout << "sizeof(scores[0]) : " << sizeof(scores[0]) << std::endl;
-    std::cout << "count : " << count << std::endl;
+    cout << "sizeof(scores) : " << sizeof(scores) << endl;
+    cout << "sizeof(scores[0]) : " << sizeof(scores[0]) << endl;
+    cout << "count : " << count << endl;
 
     int count{sizeof(scores) / sizeof(scores[0])};
 
     for (size_t i{0}; i < count; ++i)
     {
-        std::cout << "scores [" << i << "] : " << scores[i] << std::endl;
+        cout << "scores [" << i << "] : " << scores[i] << endl;
     }
 
     //! Range based for loop
     for (auto i : scores)
     {
-        std::cout << "value  : " << i << std::endl;
+        cout << "value  : " << i << endl;
     }
 
     return 0;

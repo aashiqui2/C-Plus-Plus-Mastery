@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
     const size_t COUNT {5};
@@ -8,17 +8,17 @@ int main(){
     // For loops
 	
 	
-	std::cout << "Incrementing for loop : " << std::endl;
+	cout << "Incrementing for loop : " << endl;
     for (size_t i{} ; i < COUNT ; ++i){
-        std::cout << "i  : " << i << std::endl;
+        cout << "i  : " << i << endl;
     }
 	
 	
-	std::cout << std::endl;
-	std::cout << "Decrementing for loop : " << std::endl;
+	cout << endl;
+	cout << "Decrementing for loop : " << endl;
 	
     for(size_t i{COUNT} ; i > 0 ; --i){
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
     }
     */
 
@@ -28,23 +28,23 @@ int main(){
     //While loop
     /*
     //Incrementing while
-	std::cout << std::endl;
-	std::cout << "Incrementing while" << std::endl;
+	cout << endl;
+	cout << "Incrementing while" << endl;
 	
     size_t i{0};
     
     while( i < COUNT){
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         ++i;
     }
     
     //Decrementing while
-	std::cout << std::endl;
-	std::cout << "Decrementing while : " << std::endl;
+	cout << endl;
+	cout << "Decrementing while : " << endl;
     i = COUNT;
     
     while( i > 0){
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         --i;
     }
     */
@@ -52,24 +52,24 @@ int main(){
    //Do while loop
     /*
 	//Incrementing do while
-    std::cout << std::endl;
-	std::cout << "Incrementing do while" << std::endl;
+    cout << endl;
+	cout << "Incrementing do while" << endl;
     size_t i = 0;
     
     do {
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         ++i;
         
     }while ( i < COUNT);
     
     
     //Decrementing do while
-	std::cout << std::endl;
-	std::cout << "Decrementing do while" << std::endl;
+	cout << endl;
+	cout << "Decrementing do while" << endl;
     i = COUNT;
     
     do {
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         --i;
     }while ( i > 0);
     */
@@ -77,12 +77,12 @@ int main(){
 
    //Infinite loop
     //Decrementing do while
-	std::cout << std::endl;
-	std::cout << "Decrementing do while" << std::endl;
+	cout << endl;
+	cout << "Decrementing do while" << endl;
     unsigned int i = COUNT;
     
     do {
-        std::cout << "i : " << i << std::endl;
+        cout << "i : " << i << endl;
         --i;
     }while ( i >= 0);
 

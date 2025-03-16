@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
 
@@ -9,21 +9,21 @@ int main(){
     char character4 {'o'};
     char character5 {'w'};
     
-    std::cout << character1 << std::endl;
-    std::cout << character2 << std::endl;
-    std::cout << character3 << std::endl;
-    std::cout << character4 << std::endl;
-    std::cout << character5 << std::endl;
+    cout << character1 << endl;
+    cout << character2 << endl;
+    cout << character3 << endl;
+    cout << character4 << endl;
+    cout << character5 << endl;
 
     //One byte in memory : 2^8 = 256 different values (0 ~ 255)
-    std::cout << std::endl;
+    cout << endl;
     
     char value = 65 ; // ASCII character code for 'A'
-    std::cout << "value : " << value << std::endl; // A
-    std::cout << "value(int) : " << static_cast<int>(value) << std::endl; 
+    cout << "value : " << value << endl; // A
+    cout << "value(int) : " << static_cast<int>(value) << endl; 
 
     char val='a';
-    std::cout << "value : " << val << std::endl; // a
+    cout << "value : " << val << endl; // a
 
 
     return 0;

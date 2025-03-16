@@ -5,8 +5,8 @@ int main()
     //! Declare an array of ints
     // int scores[10]; // Junk data
 
-    // std::cout << " scores [0] : " << scores[0] << std::endl;
-    // std::cout << " scores [1] : " << scores[1] << std::endl;
+    // cout << " scores [0] : " << scores[0] << endl;
+    // cout << " scores [1] : " << scores[1] << endl;
 
     //! Read with a loop
 
@@ -21,7 +21,7 @@ int main()
     //! Print the data out
     // for (size_t i{0}; i < 10; ++i)
     // {
-    //     std::cout << "scores [" << i << "] : " << scores[i] << std::endl;
+    //     cout << "scores [" << i << "] : " << scores[i] << endl;
     // }
 
     //! Write data in a loop
@@ -33,21 +33,21 @@ int main()
     //! Print the data out
     // for (size_t i{0}; i < 10; ++i)
     // {
-    //     std::cout << "scores [" << i << "] : " << scores[i] << std::endl;
+    //     cout << "scores [" << i << "] : " << scores[i] << endl;
     // }
 
     //! Declare and initialize at the same time
     // double salaries[5] {12.7, 7.5, 13.2, 8.1, 9.3};
 
     // for(size_t i{0}; i < 5; ++i){
-    //     std::cout << "salary[" << i << "] : " << salaries[i] << std::endl;
+    //     cout << "salary[" << i << "] : " << salaries[i] << endl;
     // }
 
     //! If you don't initialize all the elements, those you leave out are initialized to 0
     // int families[5] {12, 7, 5};
 
     // for(size_t i{0}; i < 5; ++i){
-    //     std::cout << "families[" << i << "] : " << families[i] << std::endl;
+    //     cout << "families[" << i << "] : " << families[i] << endl;
     // }
 
     //! Omit the size of the array at declaration
@@ -56,7 +56,7 @@ int main()
     //! Will print this with a range based for loop
     // for (auto value : class_sizes)
     // {
-    //     std::cout << "value : " << value << std::endl;
+    //     cout << "value : " << value << endl;
     // }
 
     //! Read only arrays
@@ -70,6 +70,6 @@ int main()
     // {
     //     sum += element;
     // }
-    // std::cout << "Score sum : " << sum << std::endl;
+    // cout << "Score sum : " << sum << endl;
     return 0;
 }

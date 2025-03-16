@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+using namespace std;
 int main(){
 
 	int scores[10] {11,12,13,14,15,16,17,18,19,20};
@@ -8,17 +8,17 @@ int main(){
     int * p_score { scores};
     
     //Print the address
-    std::cout << "scores : " << scores << std::endl; // Array
-    std::cout << "p_score : " << p_score << std::endl;// Pointer
-    std::cout << "&scores[0]  : " << &scores[0] << std::endl;
+    cout << "scores : " << scores << endl; // Array
+    cout << "p_score : " << p_score << endl;// Pointer
+    cout << "&scores[0]  : " << &scores[0] << endl;
     
     //Print the content at that address
-	std::cout << std::endl;
-	std::cout << "Printing out data at array address : " << std::endl;
-    std::cout << "*scores : " << *scores << std::endl;
-    std::cout << "scores[0] : " << scores[0] << std::endl;
-    std::cout << "*p_score : " << *p_score << std::endl;
-	std::cout << "p_score[0] : " << p_score[0] << std::endl;
+	cout << endl;
+	cout << "Printing out data at array address : " << endl;
+    cout << "*scores : " << *scores << endl;
+    cout << "scores[0] : " << scores[0] << endl;
+    cout << "*p_score : " << *p_score << endl;
+	cout << "p_score[0] : " << p_score[0] << endl;
 
 
     //Differences
@@ -29,11 +29,11 @@ int main(){
     //scores = &number; 
                      
     
-    std::cout << "p_score : " << p_score << std::endl;// Pointer	
+    cout << "p_score : " << p_score << endl;// Pointer	
 
-	std::cout << "size : " << std::size(scores) << std::endl;
-	//! std::size() doesn't work for raw pointers
-	//std::cout << "size : " << std::size(p_score) << std::endl; // Compiler error.
+	cout << "size : " << size(scores) << endl;
+	//! size() doesn't work for raw pointers
+	//cout << "size : " << size(p_score) << endl; // Compiler error.
    
     return 0;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 int main(){
    
@@ -7,7 +7,7 @@ int main(){
    //Infinite loop : for loop
    /*
    for(size_t i{};true ; ++i){
-       std::cout << i <<  " : I love C++" << std::endl;
+       cout << i <<  " : I love C++" << endl;
    }
    */
 
@@ -16,7 +16,7 @@ int main(){
     size_t i{0};
 
     while(true){
-        std::cout << i  << " : I love C++" << std::endl;
+        cout << i  << " : I love C++" << endl;
         ++i;
     }
     */
@@ -26,7 +26,7 @@ int main(){
     size_t i{0};
 
     do{
-        std::cout << i  << " : I love C++" << std::endl;
+        cout << i  << " : I love C++" << endl;
         ++i;
     }while(true);
     

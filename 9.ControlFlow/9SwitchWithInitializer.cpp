@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+using namespace std;
 
 // Tools
 const int Pen{ 10 };
@@ -18,12 +18,12 @@ int main(){
     switch (double strength{3.56};tool)
     {
         case Pen : {
-             std::cout << "Active tool is Pen. strength : " <<  strength << std::endl;
+             cout << "Active tool is Pen. strength : " <<  strength << endl;
         }
         break;
 
         case Marker : {
-             std::cout << "Active tool is Marker. strength : " <<  strength << std::endl;
+             cout << "Active tool is Marker. strength : " <<  strength << endl;
         }
         break;
 
@@ -31,22 +31,22 @@ int main(){
         case Eraser :
         case Rectangle : 
         case Circle : {
-             std::cout << "Drawing Shapes. strength : " <<  strength << std::endl;
+             cout << "Drawing Shapes. strength : " <<  strength << endl;
         }
         break;
 
         case Ellipse : {
-             std::cout << "Active tool is Ellipse. strength : " <<  strength << std::endl;
+             cout << "Active tool is Ellipse. strength : " <<  strength << endl;
         }
         break;
     
         default: {
-            std::cout << "No match found. strength : " <<  strength << std::endl;
+            cout << "No match found. strength : " <<  strength << endl;
         }
         break;
     }
 
-    std::cout << "Moving on" << std::endl;
+    cout << "Moving on" << endl;
     //strength++;
 
 

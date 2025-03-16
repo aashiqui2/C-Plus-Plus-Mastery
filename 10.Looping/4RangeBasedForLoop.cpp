@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+using namespace std;
 
 int main(){
 
@@ -9,7 +9,7 @@ int main(){
 	
     /*
     for(size_t i {0} ; i < 10 ; ++i){
-        std::cout << "value : " << bag_of_values[i] << std::endl;
+        cout << "value : " << bag_of_values[i] << endl;
     }
     */
 	
@@ -17,7 +17,7 @@ int main(){
     /*
     for (int value : bag_of_values){
         //value holds a copy of the current iteration in the whole bag
-        std::cout << " value : " << value << std::endl;
+        cout << " value : " << value << endl;
     }
     */
 
@@ -25,14 +25,14 @@ int main(){
    /*
     for (int value : {1,2,3,4,5,6,7,8,9,10}){
         //value holds a copy of the current iteration in the whole bag
-        std::cout << " value : " << value << std::endl;
+        cout << " value : " << value << endl;
     }
     */
 
    //Auto type deduction
 	for (auto value : {1,2,3,4,5,6,7,8,9,10}){
         //value holds a copy of the current iteration in the whole bag
-        std::cout << " value : " << value << std::endl;
+        cout << " value : " << value << endl;
     }
    
     return 0;

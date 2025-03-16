@@ -1,19 +1,19 @@
 #include <iostream>
 
-
+using namespace std;
 int main(){
 
     int condition {-5};
 
     bool bool_condition = condition;
-    std::cout << std::boolalpha;
+    cout << boolalpha;
 
 
     if(bool_condition){
-        std::cout << "We have a " << bool_condition << " in our variable " << std::endl; // different from 0
+        cout << "We have a " << bool_condition << " in our variable " << endl; // different from 0
     }else
     {
-        std::cout << "We have " << bool_condition << " in our variable" << std::endl; // zero
+        cout << "We have " << bool_condition << " in our variable" << endl; // zero
     }
     
     

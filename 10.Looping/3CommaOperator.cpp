@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main(){
 
     //The comma operator combines
@@ -13,10 +13,10 @@ int main(){
     int number2 {20};
     int number3 {25};
     int result = (number1 *= ++increment, number2 - (++increment), number3 += ++increment);
-    std::cout << "number1 : " << number1 << std::endl; // 60
-    std::cout << "number2 : " << number2 << std::endl; // 20
-    std::cout << "number3 : " << number3 << std::endl; // 33
-    std::cout << "result : " <<  result << std::endl; // 33
+    cout << "number1 : " << number1 << endl; // 60
+    cout << "number2 : " << number2 << endl; // 20
+    cout << "number3 : " << number3 << endl; // 33
+    cout << "result : " <<  result << endl; // 33
    
     return 0;
 }

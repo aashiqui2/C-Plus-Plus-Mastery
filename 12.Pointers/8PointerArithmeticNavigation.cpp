@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
@@ -11,93 +11,93 @@ int main()
 
     int *p_score{scores};
 
-    // std::cout << "Values in scores array (p_score pointer increment) : " << std::endl;
+    // cout << "Values in scores array (p_score pointer increment) : " << endl;
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
 
-    // std::cout << "Address : " << p_score << " value : " << *(p_score) << std::endl;
+    // cout << "Address : " << p_score << " value : " << *(p_score) << endl;
     // ++p_score; // Moves froward by sizeof(int) : 4 bytes
-    // std::cout << std::endl;
+    // cout << endl;
 
-    // std::cout << "Explicit addition of integer : " << std::endl;
+    // cout << "Explicit addition of integer : " << endl;
     // // Reset the pointer to the start of the array
     // p_score = scores;
 
     // // Moves forward by 4 * sizeof(int)
-    // std::cout << "scores[4] : " << *(p_score + 4) << std::endl;
+    // cout << "scores[4] : " << *(p_score + 4) << endl;
 
     //! Can use loops to print these things out : easier
     // p_score = scores;
 
-    // std::cout << std::endl;
-    // std::cout << "Pointer arithmetic on p_scores pointer and a for loop: " << std::endl;
-    // for (size_t i{0}; i < std::size(scores); ++i)
+    // cout << endl;
+    // cout << "Pointer arithmetic on p_scores pointer and a for loop: " << endl;
+    // for (size_t i{0}; i < size(scores); ++i)
     // {
-    //     std::cout << "Value : " << *(p_score + i) << std::endl; // scores[i]
+    //     cout << "Value : " << *(p_score + i) << endl; // scores[i]
     // }
 
     //! Can also do arithmetic on the array name just like any pointer.
     // p_score = scores;
 
-    // std::cout << std::endl;
-    // std::cout << "Pointer arithmetic on array name: " << std::endl;
-    // for (size_t i{0}; i < std::size(scores); ++i)
+    // cout << endl;
+    // cout << "Pointer arithmetic on array name: " << endl;
+    // for (size_t i{0}; i < size(scores); ++i)
     // {
-    //     std::cout << "Value : " << *(scores + i) << std::endl;
+    //     cout << "Value : " << *(scores + i) << endl;
     // }
 
     //! Can Print the elements in reverse order
 
-    // std::cout << std::endl;
-    // std::cout << "Elements in reverse order with decrementing pointer arithmetic: " << std::endl;
-    // for (size_t i{std::size(scores)}; i > 0; --i)
+    // cout << endl;
+    // cout << "Elements in reverse order with decrementing pointer arithmetic: " << endl;
+    // for (size_t i{size(scores)}; i > 0; --i)
     // {
     //     //? Here we do the -1 thing, because scores is already pointing to the first element in the array.
-    //     std::cout << "Value : " << *(scores + i - 1) << std::endl;
+    //     cout << "Value : " << *(scores + i - 1) << endl;
     // }
 
     //! Print in reverse order with -- operator on p_score
-    // std::cout << std::endl;
-    // std::cout << "Elements in reverse order -- arithmetic on the p_scores pointer: " << std::endl;
-    // p_score = scores + std::size(scores) - 1;
-    // for (size_t i{std::size(scores)}; i > 0; --i)
+    // cout << endl;
+    // cout << "Elements in reverse order -- arithmetic on the p_scores pointer: " << endl;
+    // p_score = scores + size(scores) - 1;
+    // for (size_t i{size(scores)}; i > 0; --i)
     // {
     //     //? Here we do the -1 thing, because scores is already pointing to the first element in the array.
-    //     std::cout << "Value : " << *(p_score--) << std::endl;
+    //     cout << "Value : " << *(p_score--) << endl;
     // }
 
     //? Can Print the elements in reverse order with array index
 
-    // std::cout << std::endl;
-    // std::cout << "Elements in reverse order with array index notation: " << std::endl;
-    // for (size_t i{std::size(scores)}; i > 0; --i)
+    // cout << endl;
+    // cout << "Elements in reverse order with array index notation: " << endl;
+    // for (size_t i{size(scores)}; i > 0; --i)
     // {
-    //     std::cout << "Value : " << scores[i - 1] << std::endl;
+    //     cout << "Value : " << scores[i - 1] << endl;
     // }
 
     // p_score = scores;
@@ -106,10 +106,10 @@ int main()
     // *(scores + 1) = 32; // Equivalent to scores[1] = 32 . Pointer arithmetic on array name
     // *(p_score + 2) = 33; // Equivalent to scores[2] = 33 . Pointer arithmetic on p_score pointer
 
-    // std::cout << std::endl;
-    // std::cout << "Printing out the array after modification of 3 first elements: " << std::endl;
-    // for ( size_t i{0} ; i < std::size(scores) ; ++i){
-    //     std::cout <<"Value : "<< scores[i] << std::endl;
+    // cout << endl;
+    // cout << "Printing out the array after modification of 3 first elements: " << endl;
+    // for ( size_t i{0} ; i < size(scores) ; ++i){
+    //     cout <<"Value : "<< scores[i] << endl;
     // }
 
     return 0;

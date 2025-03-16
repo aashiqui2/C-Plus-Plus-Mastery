@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
 
@@ -9,35 +9,35 @@ int main()
     int *p_arr0{arr0};
 
     // Print arr0
-    //  std::cout << "arr0 : ";
-    //  for (size_t i{}; i < std::size(arr0); ++i) {
-    //      std::cout << p_arr0[i] << " ";
+    //  cout << "arr0 : ";
+    //  for (size_t i{}; i < size(arr0); ++i) {
+    //      cout << p_arr0[i] << " ";
     //  }
-    //  std::cout << std::endl;
+    //  cout << endl;
 
     // Print arr1
-    // std::cout << "arr1 : ";
-    // for (size_t i{}; i < std::size(arr1); ++i) {
-    //     std::cout << p_arr1[i] << " ";
+    // cout << "arr1 : ";
+    // for (size_t i{}; i < size(arr1); ++i) {
+    //     cout << p_arr1[i] << " ";
     // }
-    // std::cout << std::endl;
+    // cout << endl;
 
     //! Swapping data the hard way
 
     // int temp[5];
 
     // Move data from arr1 into temp
-    //  for (size_t i{ 0 }; i < std::size(arr1); ++i) {
+    //  for (size_t i{ 0 }; i < size(arr1); ++i) {
     //      temp[i] = arr1[i];
     //  }
 
     // Move data from arr0 to arr1
-    //  for (size_t i{ 0 }; i < std::size(arr0); ++i) {
+    //  for (size_t i{ 0 }; i < size(arr0); ++i) {
     //      arr1[i] = arr0[i];
     //  }
 
     // Move data temp to arr0
-    //  for (size_t i{}; i < std::size(temp); ++i) {
+    //  for (size_t i{}; i < size(temp); ++i) {
     //      arr0[i] = temp[i];
     //  }
 
@@ -53,20 +53,20 @@ int main()
     p_arr0 = temp;
 
     // Print arr0
-    std::cout << "arr0 : ";
-    for (size_t i{}; i < std::size(arr0); ++i)
+    cout << "arr0 : ";
+    for (size_t i{}; i < size(arr0); ++i)
     {
-        std::cout << p_arr0[i] << " ";
+        cout << p_arr0[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Print arr1
-    std::cout << "arr1 : ";
-    for (size_t i{}; i < std::size(arr1); ++i)
+    cout << "arr1 : ";
+    for (size_t i{}; i < size(arr1); ++i)
     {
-        std::cout << p_arr1[i] << " ";
+        cout << p_arr1[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
