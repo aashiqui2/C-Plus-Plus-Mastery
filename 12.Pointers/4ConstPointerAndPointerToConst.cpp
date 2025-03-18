@@ -87,7 +87,7 @@ int main()
     //? p_protected_var is a pointer to const data, we can'tmodify the data through this pointer : regardless of whether the data itself is declared const or not.
 
     // const int *p_protected_var{&protected_var};
-    //*p_protected_var = 55;//not possible
+    // *p_protected_var = 55;//not possible
     // protected_var = 66;
     // cout << "protected_var : " << protected_var << endl;
     // cout << "protected_var : " << &protected_var << endl;

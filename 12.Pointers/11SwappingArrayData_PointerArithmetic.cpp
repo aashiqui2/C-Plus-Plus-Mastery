@@ -1,29 +1,32 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
 
-    int arr0[5]{ 1,2,3,4,5 };
-    int arr1[5]{ 6,7,8,9,10 };
+    int arr0[5]{1, 2, 3, 4, 5};
+    int arr1[5]{6, 7, 8, 9, 10};
 
-    int * p_arr0 {arr0};
-     int * p_arr1 {arr1};
+    int *p_arr0{arr0};
+    int *p_arr1{arr1};
 
-    //Print arr0
+    // Print arr0
     cout << "arr0 : ";
-    for (size_t i{}; i < size(arr0); ++i) {
+    for (size_t i{}; i < size(arr0); ++i)
+    {
         cout << *(p_arr0 + i) << " ";
     }
     cout << endl;
 
-    //Print arr1
+    // Print arr1
     cout << "arr1 : ";
-    for (size_t i{}; i < size(arr1); ++i) {
-        cout << *(p_arr0 + i) << " ";
+    for (size_t i{}; i < size(arr1); ++i)
+    {
+        cout << *(p_arr1 + i) << " ";
     }
     cout << endl;
 
-    //Swapping data the hard way
+    // Swapping data the hard way
     /*
     int temp[5];
 
@@ -43,34 +46,33 @@ int main(){
     }
     */
 
-   /*
-    int * temp{nullptr};
-    temp = arr1;
-    arr1 = arr0;
-    */
+    /*
+     int * temp{nullptr};
+     temp = arr1;
+     arr1 = arr0;
+     */
 
-    int * temp{nullptr};
+    int *temp{nullptr};
 
     temp = p_arr1;
     p_arr1 = p_arr0;
     p_arr0 = temp;
 
-    //Print arr0
+    // Print arr0
     cout << "arr0 : ";
-    for (size_t i{}; i < size(arr0); ++i) {
+    for (size_t i{}; i < size(arr0); ++i)
+    {
         cout << *(p_arr0 + i) << " ";
     }
     cout << endl;
 
-    //Print arr1
+    // Print arr1
     cout << "arr1 : ";
-    for (size_t i{}; i < size(arr1); ++i) {
+    for (size_t i{}; i < size(arr1); ++i)
+    {
         cout << *(p_arr1 + i) << " ";
     }
     cout << endl;
 
-
-
-  
     return 0;
 }

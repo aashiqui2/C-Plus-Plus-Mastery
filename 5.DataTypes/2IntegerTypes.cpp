@@ -3,8 +3,7 @@ using namespace std;
 int main()
 {
     //! Braced initializers
-    
-    /* 
+
     //? Variable may contain random garbage value . WARNING
     int elephant_count;
 
@@ -18,31 +17,28 @@ int main()
     int domesticated_animals{dog_count + cat_count};
 
     //! Error
-    // int new_number{doesnt_exist};
-    // int narrowing_conversion {2.9};//Compiler error
+   /*  int new_number{doesnt_exist};
+    int narrowing_conversion {2.9};//Compiler error */
 
     cout << "Elephant count : " << elephant_count << endl;
     cout << "Lion count : " << lion_count << endl;
     cout << "Dog count : " << dog_count << endl;
     cout << "Cat count : " << cat_count << endl;
-    cout << "Domesticated animal count : " << domesticated_animals << endl; 
-    */
+    cout << "Domesticated animal count : " << domesticated_animals << endl;
 
     //! Functional Initialization
-     int apple_count(5);
-     int orange_count(10);
-     int fruit_count (apple_count + orange_count);
-     //int bad_initialization ( doesnt_exist3 + doesnt_exist4 );
-     
-     //Information lost. less safe than braced initializers
-     int narrowing_conversion_functional (2.9);
+    int apple_count(5);
+    int orange_count(10);
+    int fruit_count(apple_count + orange_count);
+    // int bad_initialization ( doesnt_exist3 + doesnt_exist4 );
 
+    // Information lost. less safe than braced initializers
+    int narrowing_conversion_functional(2.9);
 
-     cout << "Apple count : " << apple_count << endl;
-     cout << "Orange count : " << orange_count << endl;
-     cout << "Fruit count : " << fruit_count << endl;
-     cout << "Narrowing conversion : " << narrowing_conversion_functional << endl;//Will loose info
-    
+    cout << "Apple count : " << apple_count << endl;
+    cout << "Orange count : " << orange_count << endl;
+    cout << "Fruit count : " << fruit_count << endl;
+    cout << "Narrowing conversion : " << narrowing_conversion_functional << endl; // Will loose info
 
     //! Assignment notation
 

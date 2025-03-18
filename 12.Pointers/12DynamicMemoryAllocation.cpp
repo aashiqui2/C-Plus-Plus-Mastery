@@ -6,10 +6,10 @@ int main()
 	// ? How we've used pointers so far
 
 	// int number{22}; // Stack
-
 	// int *p_number = &number;
-
 	// cout << endl;
+
+
 	// cout << "Declaring pointer and assigning address : " << endl;
 	// cout << "number : " << number << endl;
 	// cout << "p_number : " << p_number << endl;
@@ -18,8 +18,10 @@ int main()
 
 	// int *p_number1; //! Uninitialized pointer , contains junk address
 	// int number1{12};
-	// p_number1 = &number1; // Make it point to a valid address
+	// p_number1 = &number1; //! Make it point to a valid address
 	// cout << endl;
+
+
 	// cout << "Uninitialized pointer : " << endl;
 	// cout << "*p_number1 : " << *p_number1 << endl;
 
@@ -29,6 +31,7 @@ int main()
 	// cout << "Writting in the 55" << endl;
 	// *p_number2 = 55; // Writing into junk address : BAD!
 	// cout << endl;
+
 	// cout << "Writing into uninitialized pointer through dereference" << endl;
 	// cout << "p_number2 : " << p_number2 << endl; // Reading from junk address.
 	// cout << "Dereferencing bad memory" << endl;
@@ -38,14 +41,13 @@ int main()
 	// int *p_number3{nullptr}; // Also works
 	//? Initialized with pointer equivalent of zero : nullptr
 	//? A pointer pointing nowhere
-
 	// int *p_number3{};
 	// cout << "Writting into nullptr memory" << endl;
 	// *p_number3 = 33;
 	//? Writting into a pointer pointing nowhere : BAD, CRASH
 	// cout << "Done writting" << endl;
-
 	// cout << endl;
+
 	// cout << "Reading and writting through nullptr : " << endl;
 	// cout << "p_number3 : " << p_number3 << endl;
 	// cout << "*p_number3 : " << *p_number3 << endl;
@@ -111,7 +113,7 @@ int main()
 	cout << "*p_number5 : " << *p_number5 << endl;
 
 	delete p_number5;
-	delete p_number5;
+	// delete p_number5; //?BAD
 
 	cout << "Program is ending well" << endl;
 	return 0;
