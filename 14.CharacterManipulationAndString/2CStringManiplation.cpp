@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 
-    // // strlen : Find the length of a string real arrays and those decayed into pointers
+    //! strlen : Find the length of a string real arrays and those decayed into pointers
     // const char message1[]{"The sky is blue."};
 
     // // Array decays into pointer when we use const char*
@@ -167,13 +167,12 @@ int main()
     cout << "strrchr : " << endl;
     // doc : https://en.cppreference.com/w/cpp/string/byte/strrchr
 
-
     //! last occurance strrchr()
     char input[] = "/home/user/hello.cpp";
     char *output = strrchr(input, '/');
     if (output)
-        cout << output + 1 << endl; 
-        //+1 because we want to start printing past the character found by strrchr.
+        cout << output + 1 << endl;
+    //+1 because we want to start printing past the character found by strrchr.
 
     return 0;
 }

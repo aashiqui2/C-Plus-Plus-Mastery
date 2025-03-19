@@ -8,12 +8,12 @@ int main()
 
     int *p_score{scores};
 
-    // Print the address
+    //! Print the address
     cout << "scores : " << scores << endl;   // Array
     cout << "p_score : " << p_score << endl; // Pointer
     cout << "&scores[0]  : " << &scores[0] << endl;
 
-    // Print the content at that address
+    //! Print the content at that address
     cout << endl;
     cout << "Printing out data at array address : " << endl;
     cout << "*scores : " << *scores << endl;
@@ -21,7 +21,7 @@ int main()
     cout << "*p_score : " << *p_score << endl;
     cout << "p_score[0] : " << p_score[0] << endl;
 
-    // Differences
+    //! Differences
     int number{21};
     p_score = &number;
 

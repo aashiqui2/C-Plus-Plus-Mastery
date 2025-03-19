@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 
-    //  Memory Leak Issue #1: Overwriting Pointer Without Deleting
+    //!  Memory Leak Issue #1: Overwriting Pointer Without Deleting
 
     int *p_number{new int{67}}; // Dynamically allocates an int with value 67 (address1)
 
