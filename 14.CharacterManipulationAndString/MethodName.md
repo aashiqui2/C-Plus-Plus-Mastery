@@ -7,14 +7,14 @@
 6.tolower()
 7.toupper()
 
-# String Manipulation Method
-1.strlen()
+# String Manipulation Method ->(#include <cstring>)
+1.strlen()-omit the null terminator
 2.strcmp()
 3.strncmp()
-4.strchr()
-5.strrchr()
+4.strchr()-find the first occurence of character
+5.strrchr()-find the last occurence of character
 
-# String Concatenation
+# String Concatenation ->(#include <cstring>)
 1.strcat()
 2.strncat()
 3.strcpy()
@@ -25,8 +25,8 @@
 2.str.at()
 3.str.front()
 4.str.back()
-5.str.c_str()
-6.str.data()
+5.str.c_str()->Returns a Null-Terminated C-String
+6.str.data()->Returns Pointer to Character Array
 
 # String capacity and size
 1.str.size()
@@ -55,7 +55,7 @@
 4.str.swap()
 
 # String Searching Method
-1.str.find()
+1.str.find() -return the index of the search element
 
 # Transformation of String to from Int
 1.tostring()

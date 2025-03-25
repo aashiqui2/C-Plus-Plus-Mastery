@@ -40,7 +40,7 @@ int main()
       cout << "strlen(dest1) :" << strlen(dest1) << endl;
       cout << "dest1 : " << dest1 << endl; 
 
-    // strncat  : concatenates n characters from src to dest and
+    //! strncat  : concatenates n characters from src to dest and
     // returns a pointer to the result string
     // signature : char *strncat( char *dest, const char *src, size_t count );
 
@@ -58,7 +58,7 @@ int main()
     strncat(dest2, source2, 6);
     cout << "The concatenated string is : " << dest2 << endl; 
 
-    // strcpy - signature : char* strcpy( char* dest, const char* src );
+    //! strcpy - signature : char* strcpy( char* dest, const char* src );
   
     cout << endl;
     cout << "strcpy : " << endl;
@@ -73,7 +73,7 @@ int main()
     cout << "dest3 : " << dest3 << endl; 
    
 
-    // strncpy : Copy n characters from src to dest -
+    //! strncpy : Copy n characters from src to dest -
     // signature : char *strncpy( char *dest, const char *src, size_t count );
     cout << endl;
     cout << "strncpy:" << endl;

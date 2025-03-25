@@ -47,7 +47,7 @@ int main()
     //     cout << "'red' found starting at position : " << found_pos << endl;
     // }
 
-    //! Search for chicken and check result againststring::npos
+    //! Search for chicken and check result against string::npos
     // search_for = "chicken";
     // found_pos = string1.find(search_for);
 

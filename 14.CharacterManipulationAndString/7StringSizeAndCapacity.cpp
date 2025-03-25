@@ -8,21 +8,21 @@ int main()
     // string str2;
     // string str3{};
 
-    // // Empty
+    //! Empty
     // cout << endl;
     // cout << "std::string::empty() : " << endl;
     // cout << "str1 is empty : " << boolalpha << str1.empty() << endl;
     // cout << "str2 is empty : " << boolalpha << str2.empty() << endl;
     // cout << "str3 is empty : " << boolalpha << str3.empty() << endl;
 
-    // // Size
+    //! Size
     // cout << endl;
     // cout << "std::string::size() : " << endl;
     // cout << "str1 contains " << str1.size() << " characters" << endl; // 11
     // cout << "str2 contains " << str2.size() << " characters" << endl; // 0
     // cout << "str3 contains " << str3.size() << " characters" << endl; // 0
 
-    // // Length
+    //! Length
     // cout << endl;
     // cout << "std::string::length() : " << endl;
     // cout << "str1 contains " << str1.length() << " characters" << endl; // 11

@@ -46,7 +46,7 @@ int main()
     // cout << "Copying..." << endl;
     // str4.copy(txt4, 11, 9);
 
-    // // Safe to print because the char array was initialized with '\0' s.
+    // Safe to print because the char array was initialized with '\0' s.
     // cout << "txt4 : " << txt4 << endl;
 
     //! Resizing

@@ -9,7 +9,8 @@ int main(){
     switch (int data{7}; condition)
     {
         //int x{9}; // Never going to run //! Error
-        int x;
+        // int x=10; // !Error
+        int x;//?Declaring x here is allowed by some compilers but not all
     case 0 :
 
         //int y {5};

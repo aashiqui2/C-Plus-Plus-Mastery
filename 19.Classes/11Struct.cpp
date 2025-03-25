@@ -30,12 +30,12 @@ void print_point(const Point *point)
 int main()
 {
     // Dog dog1;
-    // Cat cat1;
-
     // dog1.m_name = "Fluffy"; // Compiler error
-    // cat1.m_name = "Juny";
     // cout << dog1.m_name << endl;
-    // cout << cat1.m_name << endl;
+
+    Cat cat1;
+    cat1.m_name = "Juny";
+    cout << cat1.m_name << endl;
 
     Point point1;
     point1.x = 10;

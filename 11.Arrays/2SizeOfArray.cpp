@@ -10,12 +10,12 @@ int main()
     cout << "sizeof(scores[0]) : " << sizeof(scores[0]) << endl;
     cout << "count : " << count << endl;
 
-    int count{sizeof(scores) / sizeof(scores[0])};
+    // int count{sizeof(scores) / sizeof(scores[0])};
 
-    for (size_t i{0}; i < count; ++i)
-    {
-        cout << "scores [" << i << "] : " << scores[i] << endl;
-    }
+    // for (size_t i{0}; i < count; ++i)
+    // {
+    //     cout << "scores [" << i << "] : " << scores[i] << endl;
+    // }
 
     //! Range based for loop
     for (auto i : scores)

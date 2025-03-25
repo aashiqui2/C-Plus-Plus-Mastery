@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 
-    // Print I love C++ 10 times : The bad way
+    //! Print I love C++ 10 times : The bad way
     /*
     cout << "I love C++" << endl;
     cout << "I love C++" << endl;
@@ -17,7 +17,7 @@ int main()
     cout << "I love C++" << endl;
     */
 
-    // for loop : the good way
+    //! for loop : the good way
 
     /*  for (unsigned int i{0}; i < 10000; ++i)
      {
@@ -27,7 +27,7 @@ int main()
      cout << "Loop done!" << endl;
       */
 
-    // Use size_t : a representation of some unsigned int for positive numbers [sizes]
+    //! Use size_t : a representation of some unsigned int for positive numbers [sizes]
 
     /* for (size_t i{0}; i < 10; ++i)
     {
@@ -49,7 +49,7 @@ int main()
     // cout << "i : " << i << endl;Compiler error : i is not in scope
     */
 
-    // Iterator declared outside the loop
+    //! Iterator declared outside the loop
     /*
      size_t i{0}; // Iterator defined outside
 
@@ -60,7 +60,7 @@ int main()
      cout << "i : " << i << endl;
      */
 
-    // Leave out the iterator declaration part
+    //! Leave out the iterator declaration part
     /*
     size_t i{0}; // Iterator defined outside
 
@@ -71,7 +71,7 @@ int main()
     cout << "i : " << i << endl;
     */
 
-    // Don't hard code values : BAD!
+    //! Don't hard code values : BAD!
 
     // const size_t COUNT{100};
 

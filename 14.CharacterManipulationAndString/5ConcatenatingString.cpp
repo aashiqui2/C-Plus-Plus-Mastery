@@ -81,8 +81,8 @@ int main()
 
 	string str16{"The world is our shared home."};
 	string str17{"Hello "};
-	string str18{str17.append(str16, 4, 5)}; // Append a sub-section of another string
-											 // starting from index 4 , 5 characters
+	string str18{str17.append(str16, 4, 5)};
+	 // Append a sub-section of another string starting from index 4 , 5 characters
 	cout << "str18 : " << str18 << endl;
 
 	// Direct output

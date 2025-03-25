@@ -70,15 +70,14 @@ int main()
 
     //! c_str method
     // doc : https://en.cppreference.com/w/cpp/string/basic_string/c_str
-    // returns const char * to the wrapped string. You shouldn't use
-    // it to modify data in the string.
+    // returns const char * to the wrapped string. You shouldn't use it to modify data in the string.
 
     string str2{"The Phoenix King"};
     const char *wrapped_c_string = str2.c_str();
     cout << "Wrapped c string : " << wrapped_c_string << endl;
     // wrapped_c_string[0] = 'e'; // Compiler error
 
-    // data()
+    //! data()
     string str2{"Hello World"};
 
     char *data = str2.data();//Since C++17, this is writable 

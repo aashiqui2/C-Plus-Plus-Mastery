@@ -24,13 +24,13 @@ int main()
     //(1)basic_string& insert( size_type index, size_type count, CharT ch );
     // Inserts count characters in the string starting at index index
 
-    // string str2{"122"};
-    // cout << "str2 : " << str2 << endl;
+    string str2{"122"};
+    cout << "str2 : " << str2 << endl;
 
-    // str2.insert(1, 4, '3'); // Count can be 1,2,5,..
+    str2.insert(1, 4, '3'); // Count can be 1,2,5,..
 
-    // cout << endl;
-    // cout << "str2 : " << str2 << endl; // 1322
+    cout << endl;
+    cout << "str2 : " << str2 << endl; // 1333322
 
     //! Insert (2)
     //(2)basic_string& insert( size_type index, const CharT* s );
@@ -38,15 +38,15 @@ int main()
     // at the position index. The length of the string is determined
     // by the first null character.
 
-    // string str3 {"Hello!"};
-    // const char * txt3{" World"};
+    string str3 {"Hello!"};
+    const char * txt3{" World"};
 
-    // cout << "str3 : " << str3 << endl;//Hello
+    cout << "str3 : " << str3 << endl;//Hello
 
-    // str3.insert(5,txt3);
+    str3.insert(5,txt3);
 
-    // cout << endl;
-    // cout << "str3 : " << str3 << endl;//Hello World!
+    cout << endl;
+    cout << "str3 : " << str3 << endl;//Hello World!
 
     //! Insert (3)
     //(3)basic_string& insert( size_type index, const CharT* s, size_type count );
@@ -102,7 +102,7 @@ int main()
     str9.erase(11, str9.size() - 12);
     cout << "str9 : " << str9 << endl;
 
-    // Reset str9.
+    //! Reset str9.
     str9 = "Hello World is a message used to start off things when learning programming!";
 
     // Direct print out.Because this method returns a reference to the modified string

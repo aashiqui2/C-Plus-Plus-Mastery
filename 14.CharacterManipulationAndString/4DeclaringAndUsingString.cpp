@@ -7,8 +7,9 @@ int main(){
 	string full_name;//Empty string
     string planet {"Earth. Where the sky is blue"};//Initialize with string literal
 	string prefered_planet{planet};//Initialize with other existing string
-    string message {"Hello there",5};	//Initialize with part of a string literal.
-											//Contains hello
+    string message {"Hello there",5};	//first five character.
+    string message1 {planet,6};	//starting from index 6 to end of the string
+											
     string weird_message(4,'e');//Initialize with multiple copies of a char
 									 // contains eeee
     string greeting{"Hello World"};
