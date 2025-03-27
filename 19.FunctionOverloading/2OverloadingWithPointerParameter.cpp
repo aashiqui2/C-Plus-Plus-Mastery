@@ -1,7 +1,7 @@
 #include <iostream>
-
+using namespace std;
 double max(double * numbers, size_t count){
-    std::cout << "doubles overload called" << std::endl;
+    cout << "doubles overload called" << endl;
     double maximum{0};
     
     for(size_t i{0}; i < count ;++i){
@@ -12,7 +12,7 @@ double max(double * numbers, size_t count){
 }
 
 int max(int * numbers, size_t count){
-    std::cout << "ints overload called" << std::endl;
+    cout << "ints overload called" << endl;
 
     int maximum{0};
     
@@ -28,11 +28,11 @@ int main(){
 	double  doubles[] {10.0,30.0,12.3};
 	int  ints[] {1,2,5,2,8,4};
 
-    auto result = max(ints,std::size(ints));
-    std::cout << "result : " << result << std::endl;
+    auto result = max(ints,size(ints));
+    cout << "result : " << result << endl;
 
-    auto result1 = max(doubles,std::size(doubles));
-    std::cout << "result1 : " << result1 << std::endl;
+    auto result1 = max(doubles,size(doubles));
+    cout << "result1 : " << result1 << endl;
    
     return 0;
 }

@@ -25,11 +25,11 @@ int main(){
         }   
     };
 
-    double result = sum(weights,std::size(weights));
+    double result = sum(weights,size(weights));
    cout << "2d array sum : " << result <<endl;
 
 
-    result = sum_3d(weights_3d,std::size(weights_3d));
+    result = sum_3d(weights_3d,size(weights_3d));
    cout << "3d array sum : " << result <<endl;
 
 
