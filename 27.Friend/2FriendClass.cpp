@@ -27,10 +27,10 @@ public:
     }*/
 
     //? const after method	Ensures the Cat object itself is not modified by the function.
-    void print_dog_info(const Dog &d)
-        const
+    void print_dog_info(const Dog &d)const
     {
         cout << "Dog [ name : " << d.m_name << ", age : " << d.m_age << "]" << endl;
+        //a++;//not allowded
     }
 };
 

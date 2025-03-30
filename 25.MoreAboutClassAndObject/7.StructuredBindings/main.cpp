@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 
 class Point
 {
@@ -9,7 +9,7 @@ public :
 };
 
 void print_point(const Point p){
-    std::cout << "Point [ x : " << p.x << ", y : " << p.y << "]" << std::endl;
+   cout << "Point [ x : " << p.x << ", y : " << p.y << "]" <<endl;
 }
 
 
@@ -24,20 +24,20 @@ int main(){
 
     auto [a,b] = point1;
 
-    std::cout << "a : " << a << std::endl;
-    std::cout << "b : " << b << std::endl;
+   cout << "a : " << a <<endl;
+   cout << "b : " << b <<endl;
 
     point1.x = 44.1;
     point1.y = 55.2;
 
     print_point(point1);
 
-    std::cout << "a : " << a << std::endl;
-    std::cout << "b : " << b << std::endl;
+   cout << "a : " << a <<endl;
+   cout << "b : " << b <<endl;
 
     auto func = [=](){
-        std::cout << "a (captured) : " << a << std::endl;
-        std::cout << "b (captured) : " << b << std::endl;
+       cout << "a (captured) : " << a <<endl;
+       cout << "b (captured) : " << b <<endl;
     };
     func();
 

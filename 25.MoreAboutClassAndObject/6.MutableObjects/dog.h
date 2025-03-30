@@ -2,25 +2,25 @@
 #define DOG_H
 
 #include <iostream>
-#include <string>
+using namespace std;
 
 class Dog{
 public : 
      Dog() = default;
-     Dog(const std::string& name_param, const std::string& breed_param, unsigned int age_param);
+     Dog(const string& name_param, const string& breed_param, unsigned int age_param);
 
-     std::string& name(){
+     string& name(){
         return m_name;
      }
-     const std::string& name() const{
+     const string& name() const{
         return m_name;
      }
 
 
-     std::string& breed(){
+     string& breed(){
         return m_breed;
      }
-     const std::string& breed() const{
+     const string& breed() const{
         return m_breed;
      }
 
@@ -37,8 +37,8 @@ public :
      void print_info() const;
 
 private : 
-        std::string m_name;
-        std::string m_breed;
+        string m_name;
+        string m_breed;
         unsigned int m_age;
         mutable size_t m_print_info_count{};
 };

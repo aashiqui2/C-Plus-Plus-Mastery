@@ -29,5 +29,6 @@ int main()
 {
     Dog dog1("Millou", 4);
     debug_dog_info(dog1);
+    debug_dog_info();
     return 0;
 }
