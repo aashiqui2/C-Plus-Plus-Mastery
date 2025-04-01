@@ -1,17 +1,17 @@
 #include "cylinder.h"
 
-//std::string and double
-const std::string Cylinder::default_color {"Red"};
+//string and double
+const string Cylinder::default_color {"Red"};
 const double Cylinder::PI {3.1415926535897932384626433832795};
 const char*  Cylinder::CHAR_PTR_CONSTANT   = "CString here";
 const int    Cylinder::INT_ARRAY_CONSTANT[] = {10,20,30,40,50};
 const float  Cylinder::FLOAT_CONSTANT   = 6.98f;
-const std::string Cylinder::STRING_ARRAY_CONSTANT[] = {"String1","String2"};
+const string Cylinder::STRING_ARRAY_CONSTANT[] = {"String1","String2"};
 
 
 
 Cylinder::Cylinder(double radius_param , double height_param )
-	: 	WEIRD_FLOAT{33.3},
+	: 	WEIRD_FLOAT{33.3},// ✅ Must be initialized in initializer list
 		WEIRD_C_STRING{"Weird"},
 		WEIRD_INT_ARRAY_CONSTANT{10,20,30,40,50}
 

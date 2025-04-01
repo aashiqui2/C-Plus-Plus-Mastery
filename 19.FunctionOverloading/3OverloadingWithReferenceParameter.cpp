@@ -31,6 +31,7 @@ int main(){
 
 
     auto result = max(a,b);
+    //say_my_name("hello");//ambiguty
 
    
     return 0;

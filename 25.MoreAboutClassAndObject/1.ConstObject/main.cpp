@@ -20,12 +20,12 @@ int main()
 
     //! Pointer to const
     const Dog *const_dog_ptr = &dog1;
-    // const_dog_ptr->set_name("Milou"); // Expect
+    // const_dog_ptr->set_name("Milou"); // Expect error
     // const_dog_ptr->get_name();
 
     //! Const reference
     const Dog &const_dog_ref = dog1;
-    // const_dog_ref.set_name("Milou"); // Expected
+    // const_dog_ref.set_name("Milou"); // Expected error
     // const_dog_ref.get_name();
 
     return 0;

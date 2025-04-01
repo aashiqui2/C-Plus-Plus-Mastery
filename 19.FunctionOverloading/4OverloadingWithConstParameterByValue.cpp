@@ -1,23 +1,23 @@
 #include <iostream>
 
-
+using namespace std;
 //modifiable variable
 void print(int x)
 {
-    std::cout << "Non-const int version: " << x << std::endl;
+    cout << "Non-const int version: " << x << endl;
 }
 
 //modifiable variable refrenece
 // void print(int& x)
 // {
-//     std::cout << "Non-const int version: " << x << std::endl;
+//     cout << "Non-const int version: " << x << endl;
 // }
 
 
 //not modifiable variable
 void print(const int& x)  // Doesn't create a new overload
 {
-    std::cout << "Const int version: " << x << std::endl;
+    cout << "Const int version: " << x << endl;
 }
 
 int main()

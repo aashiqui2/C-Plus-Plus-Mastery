@@ -33,7 +33,7 @@ void function_taking_pointer_to_const_dog(const Dog* const_p_dog){
 int main(){
 
     const Dog dog1("Fluffy","Shepherd",2);
-    std::cout << "address of object : " << &dog1 << std::endl;
+    cout << "address of object : " << &dog1 << endl;
 
     //! Function taking parameter by value : WORKS
     function_taking_dog(dog1);

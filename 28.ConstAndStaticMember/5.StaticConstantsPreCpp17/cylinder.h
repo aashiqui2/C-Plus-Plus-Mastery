@@ -2,7 +2,7 @@
 #define CYLINDER_H
 
 #include <string>
-
+using namespace std;
 class Cylinder {
 public : 
     //int and enum can be initialized in class declaration
@@ -11,14 +11,14 @@ public :
     static const Color COLOR_CONSTANT{Color::Green} ;
 	
 	//Others have to be done in the cpp file.
-	static const std::string default_color;
+	static const string default_color;
 	static const char*  CHAR_PTR_CONSTANT;
     static const int    INT_ARRAY_CONSTANT[5];
     static const float  FLOAT_CONSTANT;
-    static const std::string STRING_ARRAY_CONSTANT[2];
+    static const string STRING_ARRAY_CONSTANT[2];
 	
 	//Not static
-	const float WEIRD_FLOAT;
+	const float WEIRD_FLOAT; // ✅ `const` members must be initialized in initializer list
 	const char * WEIRD_C_STRING;
 	const int    WEIRD_INT_ARRAY_CONSTANT[5];
 	

@@ -1,14 +1,14 @@
 #include <iostream>
-
+using namespace std;
 int max(int *a, int *b)
 {
-    std::cout << "max with int* called" << std::endl;
+   cout << "max with int* called" <<endl;
     return (*a > *b) ? *a : *b;
 }
 
 int max(const int *a, const int *b)
 {
-    std::cout << "max with cont int* called" << std::endl;
+   cout << "max with cont int* called" <<endl;
     return (*a > *b) ? *a : *b;
 }
 /* 
@@ -19,8 +19,8 @@ int min(const int *a, const int *b)
 
 int min(const int *const a, const int *const b)
 {
-    std::cout << "&a : " << &a << std::endl;
-    std::cout << "&b : " << &b << std::endl;
+   cout << "&a : " << &a <<endl;
+   cout << "&b : " << &b <<endl;
     return (*a < *b) ? *a : *b;
 }
 
@@ -43,8 +43,8 @@ int main()
     const int *p_c{&c};
     const int *p_d{&d};
 
-    std::cout << "&p_c : " << &p_c << std::endl;
-    std::cout << "&p_d : " << &p_d << std::endl;
+   cout << "&p_c : " << &p_c <<endl;
+   cout << "&p_d : " << &p_d <<endl;
 
     auto result = min(p_c, p_d);
 
