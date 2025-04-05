@@ -5,11 +5,11 @@
 int main(){
 
     //Accessing stuff through the base class pointer
-	std::shared_ptr<Shape> shape0 = std::make_shared<Ellipse>(1,5,"ellipse0");
+	shared_ptr<Shape> shape0 = make_shared<Ellipse>(1,5,"ellipse0");
     shape0->draw(); // Polymorphism
-	//shape0->func(); // Error :  func is private in Shape
+	// shape0->func(); // Error :  func is private in Shape
 
-    std::cout << "------------" << std::endl;
+    cout << "------------" << endl;
 
     //Direct objects : static binding
 	Ellipse ellipse1 (1,6,"ellipse1");
@@ -17,7 +17,7 @@ int main(){
 	//ellipse1.draw(); //Error : draw() is private in Ellipse.- Static binding
 
 
-     std::cout << "------------" << std::endl;   
+     cout << "------------" << endl;   
 
 	//Raw derived object assigned to raw base object
     //Slicing will occur, Shape::draw will be called

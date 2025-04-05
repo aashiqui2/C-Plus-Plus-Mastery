@@ -4,35 +4,26 @@
 
 Engineer::Engineer()
 {
-    std::cout << "Default constructor for Engineer called..." << std::endl;
+    cout << "Default constructor for Engineer called..." << endl;
 }
 
-Engineer::Engineer(std::string_view fullname,int age,
-    std::string_view address,int contract_count_param) : 
-Person(fullname,age,address),contract_count(contract_count_param)
+Engineer::Engineer(string_view fullname, int age, string_view address, int contract_count_param) : Person(fullname, age, address), contract_count(contract_count_param)
 {
-    std::cout << "Custom constructor for Engineer called..." << std::endl;
+    cout << "Custom constructor for Engineer called..." << endl;
 }
 
-Engineer::Engineer(const Engineer& source)
-     : Person(source)
-        , contract_count(source.contract_count)
+Engineer::Engineer(const Engineer &source) : Person(source), contract_count(source.contract_count)
 {
-    std::cout << "Custom copy constructor for Engineer called..." << std::endl;
+    cout << "Custom copy constructor for Engineer called..." << endl;
 }
 
-std::ostream& operator<<(std::ostream& out , const Engineer& operand){
-     out << "Engineer [Full name : " << operand.get_full_name() <<
-                    ",age : " << operand.get_age() << 
-                    ",address : " << operand.get_address() <<
-                    ",contract_count : " << operand.contract_count << "]";
-    return out;   
+ostream &operator<<(ostream &out, const Engineer &operand)
+{
+    out << "Engineer [Full name : " << operand.get_full_name() << ",age : " << operand.get_age() << ",address : " << operand.get_address() << ",contract_count : " << operand.contract_count << "]";
+    return out;
 }
-
 
 Engineer::~Engineer()
 {
-    std::cout << "Destructor for Engineer called ..." << std::endl;
+    cout << "Destructor for Engineer called ..." << endl;
 }
-
-

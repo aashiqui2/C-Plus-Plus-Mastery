@@ -2,33 +2,34 @@
 #define ENGINEER_H
 #include "person.h"
 
-//Engineer is doing private inheritance
+// Engineer is doing public inheritance
 
 class Engineer : public Person
 {
-    using Person::Person; // Inheriting constructors
-friend std::ostream& operator<<(std::ostream& out , const Engineer& operand);
-public:
-/*
-    Engineer();
+    using Person::Person; // Inheriting all constructors including copy constructor from Person become private
+    friend ostream &operator<<(ostream &out, const Engineer &operand);
 
-    Engineer(const Engineer& source);
-    */
-       Engineer(std::string_view fullname,int age,
-    std::string_view address,int contract_count);
-    ~Engineer();
+public:
     
-    void build_something(){
+     /* Engineer();
+     Engineer(const Engineer& source); */
+    
+    Engineer(string_view fullname, int age, string_view address, int contract_count);
+    ~Engineer();
+
+    void build_something()
+    {
         m_full_name = "John Snow"; // OK
-        m_age = 23; // OK
-        //m_address = "897-78-723"; Compiler error
+        m_age = 23;                // OK
+        // m_address = "897-78-723"; Compiler error
     }
 
-    int get_contract_count() const{
+    int get_contract_count() const
+    {
         return contract_count;
     }
-    
-private : 
+
+private:
     int contract_count{0};
 };
 

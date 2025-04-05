@@ -5,16 +5,16 @@ class Bird : public Animal
 {
 public:
     Bird() = default;
-    Bird(std::string_view wing_color, std::string_view description);
+    Bird(string_view wing_color, string_view description);
     
     ~Bird();
     
     virtual void fly() const{
-        std::cout << "Bird::fly() called for bird : " << m_description << std::endl;
+        cout << "Bird::fly() called for bird : " << m_description << endl;
     }
     
 private : 
-    std::string m_wing_color;
+    string m_wing_color;
 };
 
 #endif // BIRD_H

@@ -15,9 +15,10 @@ void print(int x)
 
 
 //not modifiable variable
-void print(const int& x)  // Doesn't create a new overload
+const int& print(const int& x)  // Doesn't create a new overload
 {
     cout << "Const int version: " << x << endl;
+    return x;
 }
 
 int main()

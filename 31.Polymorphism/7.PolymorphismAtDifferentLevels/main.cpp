@@ -22,15 +22,16 @@ int main(){
         animal->breathe();
     }
 
-    std::cout << "------------" << std::endl;
+    cout << "------------" << endl;
 
     //Feline polymorphism
     Dog dog2("dark gray","dog2");
     Cat cat2("black stripes","cat2");
-    Pigeon pigeon2("white","pigeon2");//Putting pigeon in felines will result in compiler error
-                                        // pigeon is and Animal,a but is not a feline.
+    Pigeon pigeon2("white","pigeon2");
     Animal animal1("some animal");
     
+    //! Putting pigeon in felines will result in compiler error pigeon is and Animal,a but is not a feline.
+    // Feline* felines[] {&dog2,&cat2,&pigeon2};
     Feline* felines[] {&dog2,&cat2};
     
     for(const auto& feline : felines){
@@ -38,7 +39,7 @@ int main(){
     }
 
 
-    std::cout << "------------" << std::endl;
+    cout << "------------" << endl;
 
     //Bird polymorphism
     Pigeon pigeon3("white","pigeon1");

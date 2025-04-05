@@ -5,11 +5,11 @@ class Dog : public Feline
 {
 public:
     Dog() = default;
-    Dog(std::string_view fur_style, std::string_view description);
+    Dog(string_view fur_style, string_view description);
      virtual ~Dog();
     
     virtual void bark() const{
-        std::cout << "Dog::bark called : Woof!" << std::endl;
+        cout << "Dog::bark called : Woof!" << endl;
     }
 
 };

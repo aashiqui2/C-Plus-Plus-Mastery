@@ -4,20 +4,20 @@
 #include <string>
 #include <string_view>
 #include <iostream>
-
+using namespace std;
 class Animal
 {
 public:
     Animal() = default;
-    Animal(std::string_view description);
+    Animal(string_view description);
     virtual ~Animal();
     
     virtual void breathe()const{
-        std::cout << "Animal::breathe called for : " << m_description << std::endl;
+        cout << "Animal::breathe called for : " << m_description << endl;
     }
     
 protected: 
-    std::string m_description;
+    string m_description;
 };
 
 #endif // ANIMAL_H

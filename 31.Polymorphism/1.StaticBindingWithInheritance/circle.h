@@ -6,14 +6,14 @@ class Circle : public Oval
 {
 public:
     Circle() = default;
-    Circle(double radius,std::string_view description);
+    Circle(double radius, string_view description);
+    Circle(const Circle &circle);
     ~Circle();
-    
-    void draw() const{
-        std::cout << "Circle::draw() called. Drawing " << m_description <<
-            " with radius : " << get_x_rad() << std::endl;        
-    }
 
+    void draw() const
+    {
+        cout << "Circle::draw() called. Drawing " << m_description << " with radius : " << get_x_rad() << endl;
+    }
 };
 
 #endif // CIRCLE_H

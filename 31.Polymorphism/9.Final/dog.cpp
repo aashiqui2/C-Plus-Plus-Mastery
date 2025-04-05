@@ -1,6 +1,6 @@
 #include "dog.h"
 
-Dog::Dog(std::string_view fur_style, std::string_view description)
+Dog::Dog(string_view fur_style, string_view description)
     : Feline(fur_style,description)
 {
 }

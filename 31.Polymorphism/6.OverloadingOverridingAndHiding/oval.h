@@ -6,20 +6,19 @@ class Oval : public Shape
 {
 public:
     Oval()= default;
-    Oval(double x_radius, double y_radius,
-                std::string_view description);
+    Oval(double x_radius, double y_radius,string_view description);
     ~Oval();
     
 
-    virtual void draw() const override{
-        std::cout << "Oval::draw() called. Drawing " << m_description <<
+    virtual void draw() const {
+        cout << "Oval::draw() called. Drawing " << m_description <<
             " with m_x_radius : " << m_x_radius << " and m_y_radius : " << m_y_radius 
-                    << std::endl;
+                    << endl;
     }
 
-    virtual void draw(int color_depth, std::string_view color) const{
-		std::cout << "Drawing with color depth : " << color_depth 
-		<< " and color : " << color << std::endl;
+    virtual void draw(int color_depth, string_view color) const{
+		cout << "Drawing with color depth : " << color_depth 
+		<< " and color : " << color << endl;
 	}
 
 public:

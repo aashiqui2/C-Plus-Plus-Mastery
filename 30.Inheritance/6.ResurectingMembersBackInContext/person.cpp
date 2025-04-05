@@ -2,8 +2,7 @@
 #include <iostream>
 
 Person::Person(string_view fullname, int age,const string address)
-    : m_full_name{fullname}, m_age{age},
-      m_address{address}
+    : m_full_name{fullname}, m_age{age},m_address{address}
 {
 }
 

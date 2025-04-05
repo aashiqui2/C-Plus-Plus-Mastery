@@ -4,20 +4,15 @@
 
 Engineer::Engineer()
 {
-    std::cout << "Default constructor for Engineer called..." << std::endl;
+    cout << "Default constructor for Engineer called..." << endl;
 }
 
-std::ostream& operator<<(std::ostream& out , const Engineer& operand){
-     out << "Engineer [Full name : " << operand.get_full_name() <<
-                    ",age : " << operand.get_age() << 
-                    ",address : " << operand.get_address() <<
-                    ",contract_count : " << operand.contract_count << "]";
-    return out;   
+ostream &operator<<(ostream &out, const Engineer &operand)
+{
+    out << "Engineer [Full name : " << operand.get_full_name() << ",age : " << operand.get_age() << ",address : " << operand.get_address() << ",contract_count : " << operand.contract_count << "]";
+    return out;
 }
-
 
 Engineer::~Engineer()
 {
 }
-
-
