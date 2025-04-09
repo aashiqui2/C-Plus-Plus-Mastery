@@ -7,7 +7,7 @@ class Rectangle : public Shape
 {
 public:
     Rectangle() = default;
-    Rectangle(double width , double height,std::string_view  description);
+    Rectangle(double width , double height,string_view  description);
     virtual ~Rectangle() = default;
     
 public:

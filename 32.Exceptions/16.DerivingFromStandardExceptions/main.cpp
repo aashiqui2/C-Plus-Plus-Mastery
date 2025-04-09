@@ -1,18 +1,18 @@
 #include <iostream>
 #include <exception>
 #include <cstring>
-
-class DivideByZeroException : public std::exception {
+using namespace std;
+class DivideByZeroException : public exception {
 public :   
-    DivideByZeroException(int a, int b) noexcept : std::exception(),m_a(a),m_b(b){}
+    DivideByZeroException(int a, int b) noexcept : exception(),m_a(a),m_b(b){}
 	
      virtual const char* what() const noexcept override {
          /*
          //Some compilers will give a warning that we're returning the address of a local string
          //link : https://www.udemy.com/instructor/communication/qa/17488954/detail/?course=2987082
-         return (std::string("Divide by zero detected , dividing ") +
-            std::to_string(m_a) + std::string(" by ") +
-                std::to_string(m_b)).c_str();
+         return (string("Divide by zero detected , dividing ") +
+            to_string(m_a) + string(" by ") +
+                to_string(m_b)).c_str();
                 */
                return"divide by zero detected, dividing ";
      }
@@ -45,7 +45,7 @@ int main(){
     try{
         divide(10,0);
     }
-    catch(std::exception& ex){
+    catch(exception& ex){
         
 		
         //We know that the thrown exception contains a DivideByZeroException
@@ -53,12 +53,12 @@ int main(){
         /*
         DivideByZeroException * d_z = dynamic_cast<DivideByZeroException*> (&ex);
         if(d_z){
-            std::cout<< ex.what() << ": dividing " << d_z->get_a() << 
-                " by "<<  d_z->get_b() << std::endl;
+            cout<< ex.what() << ": dividing " << d_z->get_a() << 
+                " by "<<  d_z->get_b() << endl;
         }
         */
        
-       std::cout << ex.what() << std::endl;
+       cout << ex.what() << endl;
 		
     }
    

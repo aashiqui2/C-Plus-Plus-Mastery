@@ -1,22 +1,28 @@
 #include <iostream>
+using namespace std;
 
-
-//Declarations
+// Declarations
 void f1();
 void f2();
 void f3();
 
-void exception_thrower(){
-    std::cout << "starting execution_thrower()" << std::endl;
-    try{
-        throw 0;// Execution will halt from here
-    }catch(int ex){
-        std::cout << "Something went wrong" << std::endl;
+void exception_thrower()
+{
+    cout << "starting execution_thrower()" << endl;
+    throw 0;
+   /*  try
+    {
+        throw 0; // Execution will halt from here
     }
-    std::cout << "ending execution_thrower()" << std::endl;
+    catch (int ex)
+    {
+        cout << "Something went wrong" << endl;
+    }
+    cout << "ending execution_thrower()" << endl; */
 }
 
-int main(){
+int main()
+{
 
     f1();
 
@@ -24,168 +30,163 @@ int main(){
     try{
         f1();
     }catch(int ex){
-        std::cout << "Handling execution in main()" << std::endl;        
+        cout << "Handling execution in main()" << endl;
     }
     */
 
-    std::cout << "END." << std::endl;
-   
+    cout << "END." << endl;
+
     return 0;
 }
 
+// Definitions:
+//! Regular flow
 
-//Definitions
-//Regular flow 
-/*
-void f1(){
-    std::cout << "Starting f1()" << std::endl;
+/* void f1()
+{
+    cout << "Starting f1()" << endl;
     f2();
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
-void f2(){
-    std::cout << "Starting f2()" << std::endl;
+void f2()
+{
+    cout << "Starting f2()" << endl;
     f3();
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
-void f3(){
-    std::cout << "Starting f3()" << std::endl;
-    std::cout << "Ending f3()" << std::endl;    
-}
-*/
+void f3()
+{
+    cout << "Starting f3()" << endl;
+    cout << "Ending f3()" << endl;
+} */
 
 //*******************************************************************************
-//Exception thrown from f3() scope : Not handled anywhere
-/*
-void f1(){
-    std::cout << "Starting f1()" << std::endl;
+// Exception thrown from f3() scope : Not handled anywhere
+
+/* void f1()
+{
+    cout << "Starting f1()" << endl;
     f2();
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
-void f2(){
-    std::cout << "Starting f2()" << std::endl;
+void f2()
+{
+    cout << "Starting f2()" << endl;
     f3();
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
-void f3(){
-    std::cout << "Starting f3()" << std::endl;
+void f3()
+{
+    cout << "Starting f3()" << endl;
     exception_thrower();
-    std::cout << "Ending f3()" << std::endl;    
-}
-
-*/
+    cout << "Ending f3()" << endl;
+} */
 
 //*******************************************************************************
-//Exception thrown from f3() scope : Handled in f3()
-/*
-void f1(){
-    std::cout << "Starting f1()" << std::endl;
+//! Exception thrown from f3() scope : Handled in f3()
+
+/* void f1()
+{
+    cout << "Starting f1()" << endl;
     f2();
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
-void f2(){
-    std::cout << "Starting f2()" << std::endl;
+void f2()
+{
+    cout << "Starting f2()" << endl;
     f3();
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
-void f3(){
-    std::cout << "Starting f3()" << std::endl;
-    try{
+void f3()
+{
+    cout << "Starting f3()" << endl;
+    try
+    {
         exception_thrower();
-    }catch(int ex){
-        std::cout << "Handling execution in f3()" << std::endl;
     }
-    std::cout << "Ending f3()" << std::endl;    
-}
-*/
-
-
+    catch (int ex)
+    {
+        cout << "Handling execution in f3()" << endl;
+    }
+    cout << "Ending f3()" << endl;
+} */
 
 //*******************************************************************************
-//Exception thrown from f3() scope : Handled in f2()
+//! Exception thrown from f3() scope : Handled in f2()
 /*
 void f1(){
-    std::cout << "Starting f1()" << std::endl;
+    cout << "Starting f1()" << endl;
     f2();
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
 void f2(){
-    std::cout << "Starting f2()" << std::endl;
+    cout << "Starting f2()" << endl;
     try{
         f3();
     }catch(int ex){
-        std::cout << "Handling execution in f2()" << std::endl;        
+        cout << "Handling execution in f2()" << endl;
     }
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
 void f3(){
-    std::cout << "Starting f3()" << std::endl;
+    cout << "Starting f3()" << endl;
     exception_thrower();
-    std::cout << "Ending f3()" << std::endl;    
+    cout << "Ending f3()" << endl;
 }
 */
 
-
 //*******************************************************************************
-//Exception thrown from f3() scope : Handled in f1()
+//! Exception thrown from f3() scope : Handled in f1()
 /*
 void f1(){
-    std::cout << "Starting f1()" << std::endl;
+    cout << "Starting f1()" << endl;
     try{
         f2();
     }catch(int ex){
-        std::cout << "Handling execution in f1()" << std::endl;        
+        cout << "Handling execution in f1()" << endl;
     }
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
 void f2(){
-    std::cout << "Starting f2()" << std::endl;
+    cout << "Starting f2()" << endl;
     f3();
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
 void f3(){
-    std::cout << "Starting f3()" << std::endl;
+    cout << "Starting f3()" << endl;
     exception_thrower();
-    std::cout << "Ending f3()" << std::endl;    
+    cout << "Ending f3()" << endl;
 }
 */
 
-
 //*******************************************************************************
 
-//Exception thrown from f3() scope : Handled in main
+//! Exception thrown from f3() scope : Handled in main
 
-
-void f1(){
-    std::cout << "Starting f1()" << std::endl;
+/* void f1(){
+    cout << "Starting f1()" << endl;
     f2();
-    std::cout << "Ending f1()" << std::endl;
+    cout << "Ending f1()" << endl;
 }
 
 void f2(){
-    std::cout << "Starting f2()" << std::endl;
+    cout << "Starting f2()" << endl;
     f3();
-    std::cout << "Ending f2()" << std::endl;    
+    cout << "Ending f2()" << endl;
 }
 
 void f3(){
-    std::cout << "Starting f3()" << std::endl;
+    cout << "Starting f3()" << endl;
     exception_thrower();
-    std::cout << "Ending f3()" << std::endl;    
-}
-
-
-
-
-
-
-
+    cout << "Ending f3()" << endl;
+} */

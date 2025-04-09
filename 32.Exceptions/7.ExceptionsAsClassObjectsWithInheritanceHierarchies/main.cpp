@@ -14,7 +14,7 @@ void do_something(size_t i){
       if(i == 4){
           throw Warning("i is 4");
       }
-      std::cout << "Doing something at iteration : " << i << std::endl;
+      cout << "Doing something at iteration : " << i << endl;
 }
 
 
@@ -26,16 +26,16 @@ int main(){
           do_something(i);
       }
       catch(CriticalError& ex){
-          std::cout << "CriticalError Exception cought : " << ex.what() << std::endl;
+          cout << "CriticalError Exception cought : " << ex.what() << endl;
       }
       catch(SmallError& ex){
-          std::cout << "SmallError Exception cought : " << ex.what() << std::endl;
+          cout << "SmallError Exception cought : " << ex.what() << endl;
       }
       catch(Warning& ex){
-          std::cout << "Warning Exception cought : " << ex.what() << std::endl;
+          cout << "Warning Exception cought : " << ex.what() << endl;
       }  
       catch(SomethingIsWrong& ex){
-          std::cout << "SomethingIsWrong Exception cought : " << ex.what() << std::endl;
+          cout << "SomethingIsWrong Exception cought : " << ex.what() << endl;
       }    
     }
    

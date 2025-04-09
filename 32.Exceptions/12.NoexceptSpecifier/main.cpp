@@ -1,16 +1,16 @@
 #include <iostream>
-
+using namespace std;
 class Item{
 public : 
         Item(){}
         
         void do_something_in_class() const noexcept{
-            std::cout << "Doing something from class" << std::endl;
+            cout << "Doing something from class" << endl;
             try{
                 throw 1;
             }
             catch(int ex){
-                std::cout << "Handling exception in Item::do_something_in_class" << std::endl;
+                cout << "Handling exception in Item::do_something_in_class" << endl;
                 //throw; // Rethrowing in noexcept function/method will terminate program
             }
         }
@@ -24,7 +24,7 @@ void some_function() noexcept{
         throw 1;
     }
     catch(int ex){
-        std::cout << "Handling int excpetion in free function some_function()" << std::endl;
+        cout << "Handling int excpetion in free function some_function()" << endl;
         //throw;
     }  
 }
@@ -38,7 +38,7 @@ int main(){
 	try{
 		some_function();		
 	}catch(int ex){
-		std::cout << "Catching rethrown exception in main" << std::endl;
+		cout << "Catching rethrown exception in main" << endl;
 	}
     */
 
@@ -48,7 +48,7 @@ int main(){
 	try{
 		item.do_something_in_class();
 	}catch(int ex){
-		std::cout << "main() : Catching exception thrown from method" << std::endl;
+		cout << "main() : Catching exception thrown from method" << endl;
 	}
    
     return 0;

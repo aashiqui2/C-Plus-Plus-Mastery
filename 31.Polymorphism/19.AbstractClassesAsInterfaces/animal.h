@@ -10,20 +10,20 @@ class Animal :public StreamInsertable
 {
 public:
     Animal() = default;
-    Animal(const std::string& description);
+    Animal(const string& description);
     ~Animal();
     
     virtual void breathe()const{
-        std::cout << "Animal::breathe called for : " << m_description << std::endl;
+        cout << "Animal::breathe called for : " << m_description << endl;
     }
     
     //Stream insertable interface
-     virtual void stream_insert(std::ostream& out)const override{
+     virtual void stream_insert(ostream& out)const override{
          out << "Animal [description : " << m_description <<"]" ;
      }
     
 protected: 
-    std::string m_description;
+    string m_description;
 };
 
 #endif // ANIMAL_H

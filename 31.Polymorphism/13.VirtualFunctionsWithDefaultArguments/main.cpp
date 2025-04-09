@@ -3,6 +3,7 @@
 
 int main(){
 
+    //! base class pointer derived class object
     //Base ptr : Uses polymorphism
     Base * base_ptr1 = new Derived;
     double result = base_ptr1->add();

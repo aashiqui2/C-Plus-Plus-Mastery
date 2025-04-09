@@ -17,7 +17,7 @@ public :
     {
     }
 
-    virtual void stream_insert(std::ostream& out)const override{
+    virtual void stream_insert(ostream& out)const override{
         out << "Point [x: " << m_x << ",y: " << m_y << "]";
     }
 
@@ -30,30 +30,30 @@ private :
 int main(){
 
     Point p1(10,20);
-    std::cout << "p1 : " << p1 << std::endl;
-    //operator<<(std::cout,p1);
+    cout << "p1 : " << p1 << endl;
+    //operator<<(cout,p1);
 
-    std::cout << "------------" << std::endl;
+    cout << "------------" << endl;
 
-    std::unique_ptr<Animal> animal0 = std::make_unique<Dog>("stripes","dog1");
-    std::cout << *animal0 << std::endl;
+    unique_ptr<Animal> animal0 = make_unique<Dog>("stripes","dog1");
+    cout << *animal0 << endl;
 
-    std::unique_ptr<Animal> animal1 = std::make_unique<Bird>("white","bird1");
-    std::cout << *animal1 << std::endl;
+    unique_ptr<Animal> animal1 = make_unique<Bird>("white","bird1");
+    cout << *animal1 << endl;
 
 
-    std::cout << "--------------" << std::endl;
+    cout << "--------------" << endl;
     //Can even put animals in an array and print them polymorphically.
-   std::shared_ptr<Animal> animals[] {
-        std::make_shared<Dog>("stripes","dog2"),
-        std::make_shared<Cat>("black stripes","cat2"),
-        std::make_shared<Crow>("black wings","crow2"),
-        std::make_shared<Pigeon>("white wings","pigeon2")
+   shared_ptr<Animal> animals[] {
+        make_shared<Dog>("stripes","dog2"),
+        make_shared<Cat>("black stripes","cat2"),
+        make_shared<Crow>("black wings","crow2"),
+        make_shared<Pigeon>("white wings","pigeon2")
     };
-	std::cout << std::endl;
-    std::cout << "Printing out animals array : " << std::endl;
+	cout << endl;
+    cout << "Printing out animals array : " << endl;
     for(const auto& a : animals){
-        std::cout << *a << std::endl;
+        cout << *a << endl;
     }
     
     return 0;
