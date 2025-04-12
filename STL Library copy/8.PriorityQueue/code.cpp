@@ -63,7 +63,6 @@ void clear_queue(priority_queue<T, Container, Compare> &p_queue)
 
 int main()
 {
-    //! by default max heap 
 
     //! Code1 : Creating  pushing and accessing
     priority_queue<int> numbers1; // The greatest has higher priority
@@ -163,7 +162,7 @@ int main()
     // we need to be explicit in our print and clear functions
     // priority_queue<int, deque<int>, greater<int> > numbers2;
 
-    //! Using your own functor
+    // Using your own functor
 
     auto cmp = [](int left, int right)
     { return left < right; };

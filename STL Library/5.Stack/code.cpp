@@ -1,5 +1,8 @@
 #include <iostream>
 #include <stack>
+#include <vector>
+#include <list>
+#include <deque>
 using namespace std;
 
 class Book
@@ -9,73 +12,146 @@ class Book
 public:
     Book() = default;
     Book(int year, string title)
-        : m_year(year), m_title(title) {}
+        : m_year(year), m_title(title)
+    {
+    }
 
 private:
     int m_year;
     string m_title;
 };
 
-// Overloading << for Book
 ostream &operator<<(ostream &out, const Book &operand)
 {
     out << "Book [" << operand.m_year << ", " << operand.m_title << "]";
     return out;
 }
 
-//! Utility function to print stack of integers (passed by value to preserve original)
-void print_stack(stack<int> s)
+template <typename T, typename Container = deque<T>>
+void print_stack(stack<T, Container> stack)
 {
-    while (!s.empty())
+
+    // template <typename T>
+    // void print_stack(stack<T> stack){
+
+    //? Notice that we're working on a copy here. IMPORTANT
+    cout << "stack of elements : [";
+    while (!stack.empty())
     {
-        cout << s.top() << "  ";
-        s.pop();
+        T item = stack.top();
+        cout << " " << item;
+        stack.pop(); //? Poping from a copy doesn't affect the original. We're good here.
     }
-    cout << endl;
+    cout << "]" << endl;
 }
 
-//! Utility function to print stack of Book objects (copy to preserve original)
-template <typename T, typename Container = deque<int>>
-void print_stack1(stack<T, Container> s)
+template <typename T, typename Container = deque<T>>
+void clear_stack(stack<T, Container> &stack)
 {
-    cout << "Stack of books: [";
-    while (!s.empty())
+    // template <typename T>
+    // void clear_stack(stack<T>& stack){
+
+    cout << "Clearing stack of size : " << stack.size() << endl;
+    while (!stack.empty())
     {
-        Book item = s.top();
-        cout << " " << item;
-        s.pop();
+        stack.pop();
     }
-    cout << " ]" << endl;
 }
 
 int main()
 {
-    // Integer stack operations
-    stack<int> s1;
-    s1.push(1);
-    s1.push(2);
-    s1.push(3);
+    //! Code1 : Creating stacks and storing data in
+    stack<int> numbers1;
 
-    cout << "Size of s1: " << s1.size() << endl;
+    cout << " numbers1 : ";
+    print_stack(numbers1); // empty
 
-    stack<int> s2;
-    s2.swap(s1); // Now s2 contains 1, 2, 3
+    numbers1.push(10);
+    numbers1.push(20);
+    numbers1.push(30);
 
-    cout << "After swap:\n";
-    cout << "Size of s1: " << s1.size() << endl; // Should be 0
-    cout << "Size of s2: " << s2.size() << endl; // Should be 3
+    cout << "numbers1 : ";
+    print_stack(numbers1); // 30 20 10 : FILO
 
-    cout << "Top element in s2: " << s2.top() << endl;
+    numbers1.push(40);
+    numbers1.push(50);
 
-    // Book stack operations
+    cout << "numbers1 : ";
+    print_stack(numbers1); // 50 40 30 20 10  : FILO
+
+    cout << "-----" << endl;
+
+    //! Accessing elements
+    cout << "top : " << numbers1.top() << endl;
+    //? Pop off the top
+    print_stack(numbers1);
+    numbers1.pop();
+    print_stack(numbers1);
+    cout << "top : " << numbers1.top() << endl;
+
+    // We can organize these calls to top and pop into a function
+    //  that can nicely show the contents of a stack. That's what print_stack does
+
+    cout << "-----" << endl;
+
+    //! Code2 : Modifying the top element through the reference returned by top()
+    // top() returns a reference. We can use that to modify the underlying
+    // element in the stack
+    cout << "numbers1 : ";
+    print_stack(numbers1);
+
+    numbers1.top() = 55;
+
+    cout << "numbers1 : ";
+    print_stack(numbers1);
+
+    //! Code3 : Clearing a stack
+    cout << endl;
+    cout << "clearing a stack : " << endl;
+
+    cout << "stack initial size : " << numbers1.size() << endl;
+    cout << "numbers1 (before) : ";
+    print_stack(numbers1);
+
+    clear_stack(numbers1);
+
+    cout << "stack final size : " << numbers1.size() << endl;
+    cout << "numbers1(after) : ";
+    print_stack(numbers1);
+
+    //! Code4 : Stack of user defined types
     stack<Book> books;
     books.push(Book(1921, "The Art of War"));
     books.push(Book(2000, "Social Media Marketing"));
     books.push(Book(2020, "How the Pandemic Changed the World"));
 
-    cout << "\nBooks in stack:\n";
-    print_stack1(books); // Safe, original stack remains unchanged
-    cout << "Books stack size: " << books.size() << endl;
+    cout << "books : ";
+    print_stack(books);
+    cout << "books size : " << books.size() << endl;
+
+    //! Custom underlying sequence container
+
+    stack<int, vector<int>> numbers2;
+    stack<int, list<int>> numbers3;
+    stack<int, deque<int>> numbers4;
+
+    numbers2.push(5); // underlying container : vector
+    numbers2.push(6);
+
+    numbers3.push(7); // underlying container : list
+    numbers3.push(8);
+
+    numbers4.push(9); //  underlying container : deque
+    numbers4.push(10);
+
+    cout << " numbers4 : ";
+    print_stack(numbers4); // OK
+
+    cout << " numbers3 : ";
+    print_stack(numbers3); // Compiler error
+
+    cout << " numbers2 : ";
+    print_stack(numbers2); // Compiler error
 
     return 0;
 }

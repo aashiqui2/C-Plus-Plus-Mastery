@@ -2,144 +2,274 @@
 #include <vector>
 using namespace std;
 
-//! Template Utility Function to Print Vector (Generic for any type)
+class Item
+{
+public:
+    Item() : m_var(0)
+    {
+        cout << "Item default constructor called" << endl;
+    }
+    Item(int var) : m_var(var)
+    {
+        // cout << "Item constructor called for: " << m_var <<endl;
+    }
+    Item(int var1, int var2) : m_var(var1 * var2)
+    {
+    }
+
+    Item(const Item &source) : m_var{source.m_var}
+    {
+        // cout << "Item copy constructor called for :" << m_var <<endl;
+    }
+
+    int get() const
+    {
+        return m_var;
+    }
+
+private:
+    int m_var{0};
+};
+
+ostream &operator<<(ostream &out, const Item &item)
+{
+    out << "Item [ value : " << item.get() << "]";
+    return out;
+}
+
 template <typename T>
-void print_vec(const vector<T> &vec)
+void print_collection(const T &collection)
 {
-    for (size_t i{}; i < vec.size(); i++)
-    {
-        cout << vec[i] << " ";
-    }
-    cout << endl;
-}
 
-//! Print vector of strings using non-const iterator (modifiable version)
-void print_vec_iterator(vector<string> &v)
-{
-    vector<string>::iterator it;
-    for (it = v.begin(); it != v.end(); ++it)
-    {
-        cout << *it << " ";
-    }
-    cout << endl;
-}
+    auto it = collection.begin();
 
-//! Print vector of strings using const_iterator (read-only version)
-void print_vec_iterator(const vector<string> &v)
-{
-    vector<string>::const_iterator it;
-    for (it = v.begin(); it != v.end(); ++it)
+    cout << " Collection [";
+    while (it != collection.end())
     {
-        cout << *it << " ";
+        cout << " " << *it;
+        ++it;
     }
-    cout << endl;
-}
-
-//! Print vector of strings in reverse using reverse_iterator
-void print_rev_iterator(vector<string> &v)
-{
-    vector<string>::reverse_iterator it;
-    for (it = v.rbegin(); it != v.rend(); ++it)
-    {
-        cout << *it << " ";
-    }
-    cout << endl;
-}
-
-//! we can also use the auto keyword
-void print_rev_iterator(vector<string> &v)
-{
-    for (auto it = v.rbegin(); it != v.rend(); ++it)
-    {
-        cout << *it << " ";
-    }
-    cout << endl;
+    cout << "]" << endl;
 }
 
 int main()
 {
-    //!------------------ Basic Push Back and Capacity Growth ------------------
 
-    // vector<int> vec;
-    // vec.push_back(1); // Adds 1 to the vector
-    // vec.push_back(2); // Might trigger internal reallocation
-    // vec.push_back(3);
-    // vec.push_back(4);
-    // vec.push_back(5);
+    //! Code1 :Collection creation and element access
+    cout << endl;
+    cout << "Creatingvector's : " << endl;
+    vector<int> numbers{1, 2, 3, 4, 5}; // Default initialized vector.
+    vector<Item> items{Item(6), Item(7), Item(8), Item(9), Item(10)};
 
-    // cout << "Size: " << vec.size() << endl;       // Number of actual elements
-    // cout << "Capacity: " << vec.capacity() << endl; // Current allocated capacity
+    cout << " numbers  : ";
+    print_collection(numbers);
+    cout << " items : ";
+    print_collection(items);
 
-    // vec.emplace_back(6); // Adds 6 at the end (more efficient than push_back)
-    // vec.pop_back();      // Removes last element (6)
+    //! Accessing elements
+    cout << endl;
+    cout << "Element access : " << endl;
+    cout << " numbers[3] : " << numbers[3] << endl;       // No bound check
+    cout << " numbers.at(3) : " << numbers.at(3) << endl; // Bound check
 
-    // print_vec(vec);
+    //? No bounds check, undefined behavior, junk value or even crash.
+    cout << " numbers[30] (Undefined behavior):" << numbers[30] << endl;
+    // cout << " numbers.at(30) (throws expception): " << numbers.at(30) <<endl;
 
-    //!------------------ Element Access ------------------
+    cout << " numbers.front() : " << numbers.front() << endl;
+    cout << " numbers.back() :" << numbers.back() << endl;
 
-    // cout << vec.at(0) << endl;    // Bounds-checked access (safe)
-    // cout << vec[0] << endl;       // Direct access (no bounds check)
+    //! Data method
+    cout << " numbers[3] (with underlying data array) : " << (*(numbers.data() + 3)) << endl;
 
-    // cout << "Front element: " << vec.front() << endl;
-    // cout << "Back element : " << vec.back() << endl;
+    //! Code2 : Iterators
+    cout << "-----------------------" << endl;
 
-    //!------------------ Direct Initialization ------------------
+    cout << endl;
+    cout << "Iterators : " << endl;
 
-    // vector<int> vec1{11, 22, 33, 44, 55}; // Initializes directly with values
-    // print_vec(vec1);
+    //? begin() and end()
+    auto it = numbers.begin();
 
-    //!------------------ Fill Constructor ------------------
+    cout << " Vector(With iterators) : [ ";
+    while (it != numbers.end())
+    {
+        cout << " " << *it;
+        ++it;
+    }
+    cout << " ]" << endl;
 
-    // vector<int> vec2(3, 10); // Creates vector of size 3, all values = 10
-    // print_vec(vec2);
+    //! Reverse traversal with rbebin and rend
+    auto it_reverse = numbers.rbegin(); // non const iterator
 
-    //!------------------ Copy Constructor ------------------
+    cout << " Vector(Reverse traversal with iterators) : [ ";
+    while (it_reverse != numbers.rend())
+    {
+        cout << " " << *it_reverse;
+        ++it_reverse; // Increments towards the first element of the array.
+    }
+    cout << " ]" << endl;
 
-    // vector<int> vec3{20, 55};
-    // vector<int> vec4(vec3); // Copies all elements of vec3 into vec4
-    // print_vec(vec4);
+    cout << "-----------------------" << endl;
 
-    //!------------------ Erasing Elements ------------------
+    //! Code3 : Capacity
 
-    // vector<int> v = {1, 2, 3, 4, 5};
+    cout << endl;
 
-    // v.erase(v.begin());              // Removes first element (1)
-    // print_vec(v);
+    cout << "capacity : " << endl;
+    cout << " numbers : ";
+    print_collection(numbers);
 
-    // v.erase(v.begin() + 2);          // Removes element at index 2 (which is 4)
-    // print_vec(v);
+    cout << " numbers size : " << numbers.size() << endl;
+    cout << " numbers max_size : " << numbers.max_size() << endl;
+    cout << boolalpha; // Force output of bool as true or false instead of 1 or 0
+    cout << " numbers is empty : " << numbers.empty() << endl;
+    cout << " numbers capacity : " << numbers.capacity() << endl;
 
-    // v.erase(v.begin() + 1, v.begin() + 3); // Removes elements at index 1 and 2
-    // print_vec(v);
+    numbers.push_back(20);
+    cout << " numbers (after push_back) : ";
+    print_collection(numbers);
+    cout << " numbers capacity : " << numbers.capacity() << endl;
 
-    // Note: erase() changes size, but not capacity
+    numbers.shrink_to_fit();
+    cout << " numbers (after shrink_to_fit) : ";
+    print_collection(numbers);
+    cout << " numbers capacity : " << numbers.capacity() << endl;
 
-    //!------------------ Inserting Elements ------------------
+    numbers.reserve(20);
+    cout << " numbers(after reserve) : ";
+    print_collection(numbers);
+    cout << " numbers size : " << numbers.size() << endl;
+    cout << " numbers capacity : " << numbers.capacity() << endl;
 
-    // v.insert(v.begin() + 1, 100); // Inserts 100 at index 1
-    // print_vec(v);
+    cout << "-----------------------" << endl;
 
-    //!------------------ Clearing and Checking State ------------------
+    //! Code4 : Modifier methods
 
-    // v.clear(); // Clears all elements, but does not shrink capacity
-    // cout << "Size: " << v.size() << endl;
-    // cout << "Capacity: " << v.capacity() << endl;
+    cout << endl;
+    cout << "clear : " << endl;
+    print_collection(numbers);
 
-    // if (v.empty()) {
-    //     cout << "Vector is empty" << endl;
-    // }
+    //! Clear
+    numbers.clear();
 
-    //!------------------ Iterator Access ------------------
+    print_collection(numbers);
+    cout << " numbers size : " << numbers.size() << endl;
+    cout << " numbers capacity : " << numbers.capacity() << endl;
 
-    // cout << "vec.begin(): " << *(v.begin()) << endl;
+    numbers = {10, 20, 30, 40, 50, 60};
 
-    // Warning: end() returns iterator one-past-the-end → do NOT dereference!
-    // cout << "vec.end(): " << *(v.end()) << endl; // Undefined behavior
+    print_collection(numbers);
 
-    //!------------------ Iterator Example ------------------
+    // Insert
+    // The element you provide as insert()’s second argument is
+    // inserted right before the position referred to
+    // by the iterator you provide as its first argument
 
-    vector<string> vec_str = {"The", "sky", "is", "blue", "my", "friend"};
-    print_vec_iterator(vec_str); // Prints using non-const iterator
+    cout << endl;
+    cout << "insert : " << endl;
+
+    cout << " numbers(before insert) : ";
+    print_collection(numbers);
+
+    auto it_pos = numbers.begin() + 2;
+
+    cout << "*it_pos : " << *it_pos << endl;
+
+    numbers.insert(it_pos, 300);
+    numbers.insert(it_pos, 400);
+    // As we insert new items, it_pos changes the elements it's pointing to :it is  invalidated. Originaly it was pointing to 30. It keeps pointing at position 2 but the content at that position has changed.
+    cout << " numbers (after insert 300,400) : ";
+    print_collection(numbers);
+    cout << "*it_pos : " << *it_pos << endl;
+
+    // Emplace
+    cout << endl;
+    cout << "emplace : " << endl;
+    print_collection(items);
+
+    auto it_item_pos = items.begin() + 2;
+    //! The parameters following the iterator are passed to a constructor of the type stored in the vector.
+    items.emplace(it_item_pos, 45, 10);
+    print_collection(items);
+
+    // Erase
+    cout << endl;
+    cout << "erase : " << endl;
+    print_collection(items);
+
+    items.erase(items.begin() + 4);
+
+    print_collection(items);
+
+    // Range : visualize
+    items.erase(items.begin() + 1, items.begin() + 4);
+
+    print_collection(items);
+
+    // Emplace_back
+    cout << endl;
+    cout << "emplace_back : " << endl;
+    print_collection(items);
+
+    items.emplace_back(10, 10); // equivalent to items.emplace(items.end() , 10,10);
+    items.emplace_back(10, 11);
+    items.emplace_back(10, 12);
+
+    /*
+    //The above is equivalent to the code below.
+    items.emplace(items.end() , 10,10);
+    items.emplace(items.end() , 10,11);
+    items.emplace(items.end() , 10,12);
+    */
+
+    print_collection(items);
+
+    // Pop back
+    cout << endl;
+    cout << "pop_back : " << endl;
+    print_collection(items);
+
+    items.pop_back();
+
+    print_collection(items);
+
+    //! Resize
+    cout << endl;
+    cout << "resize (Before) : " << endl;
+    print_collection(items);
+    cout << "items size : " << items.size() << endl;
+    cout << "items capacity : " << items.capacity() << endl;
+
+    items.resize(11); //! 🔥 Calls default constructor 11 times
+
+    print_collection(items);
+    cout << "after resize : " << endl;
+    cout << "items size : " << items.size() << endl;
+    cout << "items capacity : " << items.capacity() << endl;
+
+    //! Swap
+    cout << endl;
+    cout << "swap : " << endl;
+
+    vector<Item> other_items = {Item(22), Item(33), Item(44)};
+
+    cout << "items : ";
+    print_collection(items);
+
+    cout << "other_items : ";
+    print_collection(other_items);
+
+    //! items.swap(other_items);
+    other_items.swap(items);
+
+    cout << "after swap : " << endl;
+
+    cout << "items : ";
+    print_collection(items);
+
+    cout << "other_items : ";
+    print_collection(other_items);
 
     return 0;
 }
