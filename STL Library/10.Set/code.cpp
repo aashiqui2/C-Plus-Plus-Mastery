@@ -251,5 +251,24 @@ int main()
     }
     cout << "]" << endl;
 
+    set<int> s1;
+    s1.insert(1);
+    s1.insert(2);
+    s1.insert(3);
+    s1.insert(4);
+    s1.insert(5);
+    s1.insert(6);
+
+ 
+    cout<<"Lower bound = "<<*(s1.lower_bound(4))<<endl; // should not be less than key
+    cout<<"Lower bound = "<<*(s1.lower_bound(20))<<endl; //if not found->s1.end()
+    
+    cout<<"upper bound = "<<*(s1.upper_bound(4))<<endl; //greater than key
+
+    for(auto val:s1)
+    {
+        cout<<val<<" ";
+    }
+
     return 0;
 }
